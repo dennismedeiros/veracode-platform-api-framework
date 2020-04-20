@@ -1,0 +1,10 @@
+### Maven ###
+target/
+
+### Maven Site ###
+doc/
+
+### Eclipse ###
+.settings/
+.classpath
+.project
