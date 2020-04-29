@@ -10,13 +10,17 @@ public interface Sandbox extends Scan {
 
 	/**
 	 * Gets the value of the sandboxId property.
-	 * 
+	 * @return
+	 *     possible object is
+	 *     {@link long }
 	 */
 	long getSandboxId();
 
 	/**
 	 * Sets the value of the sandboxId property.
-	 * 
+	 * @param value
+	 *     allowed object is
+	 *     {@link long } 
 	 */
 	void setSandboxId(long value);
 

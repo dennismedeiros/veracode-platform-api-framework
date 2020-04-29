@@ -38,15 +38,15 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link DataPaths }
-     * 
+     * @return Returns an object of {@link DataPath } 
      */
     public DataPaths createCallstacks() {
         return new DataPaths();
     }
 
     /**
-     * Create an instance of {@link CallStackType }
-     * 
+     * Create an instance of {@link DataPath }
+     * @return Returns an object of {@link DataPath } 
      */
     public DataPath createCallStackType() {
         return new CallStackType();
@@ -54,7 +54,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link CallType }
-     * 
+     * @return Returns an object of {@link CallType }
      */
     public CallType createCallType() {
         return new CallType();

@@ -19,34 +19,45 @@
   	<version>0.0.1-SNAPSHOT</version>
   </parent>
   
-   <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-javadoc-plugin -->
-
+  <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-javadoc-plugin -->
+  <!-- 
+    <dependencies>
+	  <dependency>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-javadoc-plugin</artifactId>
+	    <version>2.6.1</version>
+	    <scope>provided</scope>
+	</dependency>	
+  </dependencies>
+ -->
+   <!-- 
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.1.1</version>
+        <version>2.6.1</version>
         <configuration>
-<!--           <show>private</show> -->
-			<author>true</author>
-          <nohelp>true</nohelp>
+		   <author>true</author>
+           <nohelp>true</nohelp>
         </configuration>
       </plugin>
     </plugins>
   </build>
+ -->
+ <!--
    <reporting>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.1.1</version>
+        <version>2.6.1</version>
         <configuration>
-          <show>private</show> 
-          <nohelp>true</nohelp>
+           <author>true</author>
+           <nohelp>true</nohelp>
         </configuration>
       </plugin>
     </plugins>
   </reporting>
-
+-->
 </project>

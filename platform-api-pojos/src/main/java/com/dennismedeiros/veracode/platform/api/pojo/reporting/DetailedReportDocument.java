@@ -1,14 +1,5 @@
-/**
- * Represents a Detailed Report document within the Veracode Platform.
- * 
- * @author Dennis Medeiros
- * 
- * @see DetailedReport
- */
-
 package com.dennismedeiros.veracode.platform.api.pojo.reporting;
 
-import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -47,7 +38,18 @@ import com.dennismedeiros.veracode.platform.api.pojo.reporting.common.FlawStatus
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.common.Severity;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.common.SeverityLevel;
 
-
+/**
+ * Represents a Document of a Detailed Report within the Veracode Platform.
+ * <p>
+ * The Detailed Report is a container document that presents    
+ * the results of most recent scans conducted. The report includes information regarding the current policy of the application portfolio standing.  
+ * As well as result information on each available analysis conducted up to the period of the reports creation. 
+ * 
+ * @author Dennis Medeiros
+ * 
+ * @since 1.0
+ * @version 1.0
+ */
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlType(propOrder = {
     "staticAnalysis",
@@ -169,114 +171,71 @@ public class DetailedReportDocument implements DetailedReport {
 		return this.analysisid;
 	}
     /**
-     * Gets the value of the anyTypeScanDue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getAnyTypeScanDue() {
         return anyTypeScanDue;
     }
-	/**
-     * Gets the value of the appId property.
-     * 
+    /**
+     * {@inheritDoc}
      */
     @Override
-	public Long getAppId() {
+	public Long getApplicationPortfolioId() {
         return appId;
     }
-   
-	/**
-     * Gets the value of the appName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+    /**
+     * {@inheritDoc}
      */
     @Override
-	public String getAppName() {
+	public String getApplicationPortfolioName() {
         return appName;
     }
-	/**
-     * Gets the value of the assuranceLevel property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Long }
-     *     
+    /**
+     * {@inheritDoc}
      */
     @Override
 	public Long getAssuranceLevel() {
         return assuranceLevel.longValue();
     }
-	
-	/**
-     * Gets the value of the businessCriticality property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Long }
-     *     
+    /**
+     * {@inheritDoc}
      */
     @Override
 	public Long getBusinessCriticality() {
         return businessCriticality.longValue();
     }
-	/**
-     * Gets the value of the businessOwner property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+    /**
+     * {@inheritDoc}
      */
     @Override
 	public String getBusinessOwner() {
         return businessOwner;
     }
     /**
-     * Gets the value of the businessUnit property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getBusinessUnit() {
         return businessUnit;
     }
-
     /**
-     * Gets the value of the customfields property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CustomFields }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public CustomFieldsList getCustomFields() {
         return customfields;
     }
-
     /**
-     * Gets the value of the dynamicAnalysis property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AnalysisReport }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public Analysis getDynamicAnalysis() {
-        return null; //dynamicAnalysis;
+        throw new UnsupportedOperationException("Not yet supported."); 
     }
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
 	public List<Find> getDynamicAnalysisFindings() {
     	
@@ -313,98 +272,51 @@ public class DetailedReportDocument implements DetailedReport {
     	
     	return this._dyanmicflaws;
 	}
-
     /**
-     * Gets the value of the firstBuildSubmittedDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getFirstBuildSubmittedDate() {
         return firstBuildSubmittedDate;
     }
-
     /**
-     * Gets the value of the flawsNotMitigated property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public Long getFlawsNotMitigated() {
         return flawsNotMitigated.longValue();
     }
-
     /**
-     * Gets the value of the flawStatus property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link FlawStatusSummary }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public FlawStatus getFlawStatus() {
         return flawStatus;
     }
-
     /**
-     * Gets the value of the generationDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getGenerationDate() {
         return generationDate;
     }
-
     /**
-     * Gets the value of the lastUpdateTime property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getLastUpdateTime() {
         return lastUpdateTime;
     }
-
     /**
-     * Gets the value of the lifeCycleStage property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getLifeCycleStage() {
         return lifeCycleStage;
     }
-
     /**
-     * Gets the value of the manualAnalysis property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ManualAnalysisReport }
-     *     
+     * {@inheritDoc}
      */
-    @Override
-	public ManualAnalysis ManualPenetrationTestingAnalysis() {
-        return manualAnalysis;
-    }
-
     @Override
 	public List<Find> getManualAnalysisFindings() {
     	if(this._manualflaws == null) {
@@ -440,159 +352,100 @@ public class DetailedReportDocument implements DetailedReport {
     	
     	return this._manualflaws;
 	}
-
     /**
-     * Gets the value of the plannedDeploymentDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
+     */
+    @Override
+	public ManualAnalysis getManualPenetrationTestingAnalysis() {
+        return manualAnalysis;
+    }
+    /**
+     * {@inheritDoc}
      */
     @Override
 	public String getPlannedDeploymentDate() {
         return plannedDeploymentDate;
     }
-
     /**
-     * Gets the value of the platform property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getPlatform() {
         return platform;
     }
-
     /**
-     * Gets the value of the policyComplianceStatus property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getPolicyComplianceStatus() {
         return policyComplianceStatus;
-    }
-
+    }  
     /**
-     * Gets the value of the policyName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getPolicyName() {
         return policyName;
     }
-
-    /**
-     * Gets the value of the policyRulesStatus property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+    /**	
+     * {@inheritDoc}
      */
     @Override
 	public String getPolicyRulesStatus() {
         return policyRulesStatus;
     }
-
     /**
-     * Gets the value of the policyVersion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public Long getPolicyVersion() {
         return policyVersion.longValue();
     }
-
     /**
-     * Gets the value of the reportFormatVersion property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getReportFormatVersion() {
         return reportFormatVersion;
     }
-
-    /**
-     * Gets the value of the sandboxId property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Long }
-     *     
-     */
+     /**
+      * {@inheritDoc}
+      */
     @Override
 	public Long getSandboxId() {
         return sandboxId;
     }
-
     /**
-     * Gets the value of the sandboxName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getSandboxName() {
         return sandboxName;
     }
-
     /**
-     * Gets the value of the buildId property.
-     * 
+     * {@inheritDoc}
      */
     @Override
 	public Long getScanId() {
         return buildId;
     }
-
     /**
-     * Gets the value of the version property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getScanName() {
         return version;
     }
-
     /**
-     * Gets the value of the scanOverdue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getScanOverdue() {
         return scanOverdue;
     }
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
 	public List<Severity> getSeverities() {
         if (severity == null) {
@@ -600,27 +453,15 @@ public class DetailedReportDocument implements DetailedReport {
         }
         return this.severity;
     }
-
     /**
-     * Gets the value of the softwareCompositionAnalysis property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SoftwareCompositionAnalysis }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public ISoftwareCompositionAnalysis getSoftwareCompositionAnalysis() {
         return softwareCompositionAnalysis;
     }
-
     /**
-     * Gets the value of the staticAnalysis property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AnalysisReport }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public StaticAnalysis getStaticAnalysis() {
@@ -642,7 +483,9 @@ public class DetailedReportDocument implements DetailedReport {
     	
     	return staticAnalysis;
     }
-
+    /**
+     * {@inheritDoc}
+     */
     protected List<Find> getStaticAnalysisFindings() {
     	
     	if(this._staticflaws == null) {
@@ -678,103 +521,57 @@ public class DetailedReportDocument implements DetailedReport {
     	
     	return this._staticflaws;
     }
-
     /**
-     * Gets the value of the submitter property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getSubmitter() {
         return submitter;
     }
-
     /**
-     * Gets the value of the tags property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getTags() {
         return tags;
     }
-
     /**
-     * Gets the value of the teams property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getTeams() {
         return teams;
     }
-
     /**
-     * Gets the value of the totalFlaws property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public Long getTotalFlaws() {
         return totalFlaws.longValue();
     }
-
     /**
-     * Gets the value of the vendor property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getVendor() {
         return vendor;
     }
-
     /**
-     * Gets the value of the veracodeLevel property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     @Override
 	public String getVeracodeLevel() {
         return veracodeLevel;
     }
-
     /**
-     * Gets the value of the gracePeriodExpired property.
-     * 
+     * {@inheritDoc}
      */
     @Override
 	public Boolean hasGracePeriodExpired() {
         return gracePeriodExpired;
     }
-
     /**
-     * Checks to see if the Detailed Report contains the requested analysis report type.
-     * Returns true is requested analysis report type type is part of the Detailed Report. 
-     * Otherwise the method will return false.  
-     * 
-     * @param analysisReportType
-     *    allowed object is {@link AnalysisReportType}}
-     * 
-     * @return {@link Boolean}
+     * {@inheritDoc}
      */
 	@Override
 	public Boolean hasScan(AnalysisReportType analysisReportType) {
@@ -801,29 +598,23 @@ public class DetailedReportDocument implements DetailedReport {
 		
 		return bResult;
 	}
-
     /**
-     * Gets the value of the isLatestBuild property.
-     * 
+     * {@inheritDoc}
      */
     @Override
 	public Boolean isLatestBuild() {
         return isLatestBuild;
     }
-
     /**
-     * Indicates if the scanning engine being used is a legacyScanEngine.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     * @deprecated
+     * {@inheritDoc}
      */
     @Override
 	public Boolean isLegacyScanEngine() {
         return legacyScanEngine;
     }
-
+    /**
+     * {@inheritDoc}
+     */
     @Override
 	public Boolean isPolicyLevelAnalysis() {
     	boolean result = false;
@@ -842,46 +633,26 @@ public class DetailedReportDocument implements DetailedReport {
     private void setAnalysisId(String analysisid) {
 		this.analysisid = analysisid;
 	}
-
     /**
-     * Sets the value of the anyTypeScanDue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
     private void setAnyTypeScanDue(String value) {
         this.anyTypeScanDue = value;
     }
-
     /**
-     * Sets the value of the appId property.
-     * 
+     * {@inheritDoc}
      */
-    private void setAppId(Long value) {
+    private void setApplicationPortfolioId(Long value) {
         this.appId = value;
     }
-
     /**
-     * Sets the value of the appName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     * {@inheritDoc}
      */
-    private void setAppName(String value) {
+    private void setApplicationPortfolioName(String value) {
         this.appName = value;
     }
-
     /**
-     * Sets the value of the assuranceLevel property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Long }
-     *     
+     * {@inheritDoc}
      */
     private void setAssuranceLevel(Long value) {
         this.assuranceLevel = BigInteger.valueOf(value);

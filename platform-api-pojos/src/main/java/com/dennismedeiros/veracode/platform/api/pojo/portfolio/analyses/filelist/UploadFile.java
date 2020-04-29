@@ -29,7 +29,7 @@ public class UploadFile implements UploadedFile {
     protected String fileMd5;
 
     /* (non-Javadoc)
-	 * @see com.veracode.platform.parsers.jaxb.templates.filelist.IFileType#getFileId()
+	 * @see com.dennismedeiros.veracode.platform.parsers.jaxb.templates.filelist.IFileType#getFileId()
 	 */
     @Override
 	public Long getFileId() {
@@ -37,7 +37,7 @@ public class UploadFile implements UploadedFile {
     }
 
    /* (non-Javadoc)
-	 * @see com.veracode.platform.parsers.jaxb.templates.filelist.IFileType#getFileName()
+	 * @see com.dennismedeiros.veracode.platform.parsers.jaxb.templates.filelist.IFileType#getFileName()
 	 */
     @Override
 	public String getFileName() {
@@ -45,7 +45,7 @@ public class UploadFile implements UploadedFile {
     }
 
     /* (non-Javadoc)
-	 * @see com.veracode.platform.parsers.jaxb.templates.filelist.IFileType#getFileStatus()
+	 * @see com.dennismedeiros.veracode.platform.parsers.jaxb.templates.filelist.IFileType#getFileStatus()
 	 */
 //    @Override
 //	public IStatusType getFileStatus() {
@@ -53,7 +53,7 @@ public class UploadFile implements UploadedFile {
 //    }
 
     /* (non-Javadoc)
-	 * @see com.veracode.platform.parsers.jaxb.templates.filelist.IFileType#getFileMd5()
+	 * @see com.dennismedeiros.veracode.platform.parsers.jaxb.templates.filelist.IFileType#getFileMd5()
 	 */
     @Override
 	public String getFileMd5() {

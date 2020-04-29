@@ -45,7 +45,7 @@ public class FilePathList {
      * Objects of the following type(s) are allowed in the list
      * {@link FilePath }
      * 
-     * 
+     * @return List of FilePath objects
      */
     public List<FilePath> getFilePath() {
         if (filePath == null) {

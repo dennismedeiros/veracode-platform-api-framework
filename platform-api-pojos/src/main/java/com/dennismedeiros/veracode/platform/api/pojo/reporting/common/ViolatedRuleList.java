@@ -44,7 +44,7 @@ public class ViolatedRuleList {
      * Objects of the following type(s) are allowed in the list
      * {@link PolicyRule }
      * 
-     * 
+     * @return List of PolicyRule objects
      */
     public List<PolicyRule> getPolicyRule() {
         if (policyRule == null) {

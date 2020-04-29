@@ -43,7 +43,7 @@ public class MitigationInfo {
      * Objects of the following type(s) are allowed in the list
      * {@link Issue }
      * 
-     * 
+     * @return List of Issue objects
      */
     public List<Issue> getIssues() {
         if (issue == null) {
@@ -72,7 +72,7 @@ public class MitigationInfo {
      * Objects of the following type(s) are allowed in the list
      * {@link ErrorMessage }
      * 
-     * 
+     * @return
      */
     public List<ErrorMessage> getErrors() {
         if (error == null) {

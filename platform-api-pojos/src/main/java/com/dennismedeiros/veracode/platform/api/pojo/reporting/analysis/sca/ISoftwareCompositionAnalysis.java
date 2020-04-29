@@ -46,13 +46,17 @@ public interface ISoftwareCompositionAnalysis {
 
 	/**
 	 * Gets the value of the violatePolicy property.
-	 * 
+	 * @return
+	 *     possible object is
+	 *     {@link BigInteger } 
 	 */
 	boolean isViolatePolicy();
 
 	/**
 	 * Sets the value of the violatePolicy property.
-	 * 
+	 * @param value
+	 *     allowed object is
+	 *     {@link BigInteger }
 	 */
 	void setViolatePolicy(boolean value);
 

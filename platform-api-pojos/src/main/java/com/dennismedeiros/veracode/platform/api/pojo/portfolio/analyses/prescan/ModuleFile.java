@@ -65,7 +65,7 @@ public class ModuleFile {
      * Objects of the following type(s) are allowed in the list
      * {@link IssueType }
      * 
-     * 
+     * @return List of IssueType objects
      */
     public List<IssueType> getIssues() {
         if (issue == null) {

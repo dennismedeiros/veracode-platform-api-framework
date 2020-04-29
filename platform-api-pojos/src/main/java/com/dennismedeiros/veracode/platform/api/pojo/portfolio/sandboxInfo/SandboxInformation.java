@@ -87,7 +87,7 @@ public class SandboxInformation {
 
     /**
      * Gets the value of the accountId property.
-     * 
+     * @return Returns value of Account identifier
      */
     public long getAccountId() {
         return accountId;
@@ -95,7 +95,7 @@ public class SandboxInformation {
 
     /**
      * Sets the value of the accountId property.
-     * 
+     * @param value value to set the Account identifier
      */
     public void setAccountId(long value) {
         this.accountId = value;
@@ -103,7 +103,7 @@ public class SandboxInformation {
 
     /**
      * Gets the value of the appId property.
-     * 
+     * @return Returns the application portfolio identifier
      */
     public long getAppId() {
         return appId;
@@ -111,7 +111,7 @@ public class SandboxInformation {
 
     /**
      * Sets the value of the appId property.
-     * 
+     * @param value value to set the application identifier
      */
     public void setAppId(long value) {
         this.appId = value;

@@ -61,10 +61,10 @@ public class UserAccount implements User {
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#setLoginAccountType(com.veracode.platform.parsers.jaxb.templates.applicatonlist.LoginAccountType)
 	 */
-    @Override
-	public void setLoginAccountType(LoginAccountType value) {
-        this.loginAccountType = value;
-    }
+//    @Override
+//	public void setLoginAccountType(LoginAccountType value) {
+//        this.loginAccountType = value;
+//    }
 
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#getUsername()
@@ -77,10 +77,10 @@ public class UserAccount implements User {
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#setUsername(java.lang.String)
 	 */
-    @Override
-	public void setUsername(String value) {
-        this.username = value;
-    }
+//    @Override
+//	public void setUsername(String value) {
+//        this.username = value;
+//    }
 
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#isCreateApplicationProfile()
@@ -93,10 +93,10 @@ public class UserAccount implements User {
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#setCreateApplicationProfile(boolean)
 	 */
-    @Override
-	public void setCreateApplicationProfile(boolean value) {
-        this.createApplicationProfile = value;
-    }
+//    @Override
+//	public void setCreateApplicationProfile(boolean value) {
+//        this.createApplicationProfile = value;
+//    }
 
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#isCreateSandbox()
@@ -109,10 +109,10 @@ public class UserAccount implements User {
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#setCreateSandbox(boolean)
 	 */
-    @Override
-	public void setCreateSandbox(boolean value) {
-        this.createSandbox = value;
-    }
+//    @Override
+//	public void setCreateSandbox(boolean value) {
+//        this.createSandbox = value;
+//    }
 
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#isCreateNewBuild()
@@ -125,10 +125,10 @@ public class UserAccount implements User {
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#setCreateNewBuild(boolean)
 	 */
-    @Override
-	public void setCreateNewBuild(boolean value) {
-        this.createNewBuild = value;
-    }
+//    @Override
+//	public void setCreateNewBuild(boolean value) {
+//        this.createNewBuild = value;
+//    }
 
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#isCreatePolicyScan()
@@ -141,10 +141,10 @@ public class UserAccount implements User {
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#setCreatePolicyScan(boolean)
 	 */
-    @Override
-	public void setCreatePolicyScan(boolean value) {
-        this.createPolicyScan = value;
-    }
+//    @Override
+//	public void setCreatePolicyScan(boolean value) {
+//        this.createPolicyScan = value;
+//    }
 
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#isCreateSandboxScan()
@@ -157,10 +157,10 @@ public class UserAccount implements User {
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#setCreateSandboxScan(boolean)
 	 */
-    @Override
-	public void setCreateSandboxScan(boolean value) {
-        this.createSandboxScan = value;
-    }
+//    @Override
+//	public void setCreateSandboxScan(boolean value) {
+//        this.createSandboxScan = value;
+//    }
 
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#isAssignAppToTeam()
@@ -173,10 +173,10 @@ public class UserAccount implements User {
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#setAssignAppToTeam(boolean)
 	 */
-    @Override
-	public void setAssignAppToTeam(boolean value) {
-        this.assignAppToTeam = value;
-    }
+//    @Override
+//	public void setAssignAppToTeam(boolean value) {
+//        this.assignAppToTeam = value;
+//    }
 
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#isAssignAppToAnyTeam()
@@ -189,10 +189,10 @@ public class UserAccount implements User {
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#setAssignAppToAnyTeam(boolean)
 	 */
-    @Override
-	public void setAssignAppToAnyTeam(boolean value) {
-        this.assignAppToAnyTeam = value;
-    }
+//    @Override
+//	public void setAssignAppToAnyTeam(boolean value) {
+//        this.assignAppToAnyTeam = value;
+//    }
 
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#isViewSandbox()
@@ -205,10 +205,10 @@ public class UserAccount implements User {
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#setViewSandbox(boolean)
 	 */
-    @Override
-	public void setViewSandbox(boolean value) {
-        this.viewSandbox = value;
-    }
+//    @Override
+//	public void setViewSandbox(boolean value) {
+//        this.viewSandbox = value;
+//    }
 
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#isViewResults()
@@ -221,10 +221,10 @@ public class UserAccount implements User {
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#setViewResults(boolean)
 	 */
-    @Override
-	public void setViewResults(boolean value) {
-        this.viewResults = value;
-    }
+//    @Override
+//	public void setViewResults(boolean value) {
+//        this.viewResults = value;
+//    }
 
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#isApproveMitigations()
@@ -237,10 +237,10 @@ public class UserAccount implements User {
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#setApproveMitigations(boolean)
 	 */
-    @Override
-	public void setApproveMitigations(boolean value) {
-        this.approveMitigations = value;
-    }
+//    @Override
+//	public void setApproveMitigations(boolean value) {
+//        this.approveMitigations = value;
+//    }
 
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#isSubmitStaticScan()
@@ -253,10 +253,10 @@ public class UserAccount implements User {
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#setSubmitStaticScan(boolean)
 	 */
-    @Override
-	public void setSubmitStaticScan(boolean value) {
-        this.submitStaticScan = value;
-    }
+//    @Override
+//	public void setSubmitStaticScan(boolean value) {
+//        this.submitStaticScan = value;
+//    }
 
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#isSubmitPolicyStaticScan()
@@ -269,10 +269,10 @@ public class UserAccount implements User {
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#setSubmitPolicyStaticScan(boolean)
 	 */
-    @Override
-	public void setSubmitPolicyStaticScan(boolean value) {
-        this.submitPolicyStaticScan = value;
-    }
+//    @Override
+//	public void setSubmitPolicyStaticScan(boolean value) {
+//        this.submitPolicyStaticScan = value;
+//    }
 
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#isSubmitSandboxStaticScan()
@@ -285,9 +285,9 @@ public class UserAccount implements User {
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.applicatonlist.IUserType#setSubmitSandboxStaticScan(boolean)
 	 */
-    @Override
-	public void setSubmitSandboxStaticScan(boolean value) {
-        this.submitSandboxStaticScan = value;
-    }
+//    @Override
+//	public void setSubmitSandboxStaticScan(boolean value) {
+//        this.submitSandboxStaticScan = value;
+//    }
 
 }

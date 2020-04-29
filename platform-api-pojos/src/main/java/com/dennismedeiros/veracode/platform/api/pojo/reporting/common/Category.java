@@ -36,9 +36,9 @@ public interface Category {
 	 * 
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list
-	 * {@link CweWeakness }
+	 * {@link CweCategory }
 	 * 
-	 * 
+	 * @return list of CweCategory objects
 	 */
 	List<CweCategory> getCWEs();
 

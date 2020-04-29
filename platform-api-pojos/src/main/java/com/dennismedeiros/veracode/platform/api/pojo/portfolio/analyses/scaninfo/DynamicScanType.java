@@ -25,6 +25,10 @@ public enum DynamicScanType {
         value = v;
     }
 
+    /**
+     * Returns the dynamic type
+     * @return returns a string containing the value.
+     */
     public String value() {
         return value;
     }

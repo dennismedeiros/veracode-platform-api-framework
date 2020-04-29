@@ -37,8 +37,8 @@ public class SandboxInfoObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Sandboxinfo }
-     * 
+     * Create an instance of {@link SandboxInformation }
+     * @return SandboxInformation object
      */
     public SandboxInformation createSandboxinfo() {
         return new SandboxInformation();
@@ -46,7 +46,7 @@ public class SandboxInfoObjectFactory {
 
     /**
      * Create an instance of {@link SandboxType }
-     * 
+     * @return SanboxType object
      */
     public SandboxType createSandboxType() {
         return new SandboxType();
@@ -54,7 +54,7 @@ public class SandboxInfoObjectFactory {
 
     /**
      * Create an instance of {@link CustomFieldType }
-     * 
+     * @return CustomFieldType
      */
     public CustomFieldType createCustomFieldType() {
         return new CustomFieldType();

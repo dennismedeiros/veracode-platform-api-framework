@@ -37,8 +37,8 @@ public class ScanInfoObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Buildinfo }
-     * 
+     * Create an instance of 
+     * @return Return a BuildInfo object
      */
     public BuildInfo createBuildinfo() {
         return new BuildInfo();
@@ -46,7 +46,7 @@ public class ScanInfoObjectFactory {
 
     /**
      * Create an instance of {@link BuildType }
-     * 
+     * @return Returns a BuildType object
      */
     public BuildType createBuildType() {
         return new BuildType();
@@ -54,7 +54,7 @@ public class ScanInfoObjectFactory {
 
     /**
      * Create an instance of {@link AnalysisUnitType }
-     * 
+     * @return Returns a AnalysisUnitType object
      */
     public AnalysisUnitType createAnalysisUnitType() {
         return new AnalysisUnitType();

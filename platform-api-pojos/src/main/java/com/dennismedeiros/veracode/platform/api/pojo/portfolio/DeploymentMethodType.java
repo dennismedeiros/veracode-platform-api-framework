@@ -17,19 +17,6 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for DeploymentMethodType.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="DeploymentMethodType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="Not Specified"/>
- *     &lt;enumeration value="Web Based"/>
- *     &lt;enumeration value="Enterprise Application Enhancement"/>
- *     &lt;enumeration value="Client/Server"/>
- *     &lt;enumeration value="Mobile"/>
- *     &lt;enumeration value="Stand Alone"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
- * </pre>
  * 
  */
 @XmlType(name = "DeploymentMethodType")

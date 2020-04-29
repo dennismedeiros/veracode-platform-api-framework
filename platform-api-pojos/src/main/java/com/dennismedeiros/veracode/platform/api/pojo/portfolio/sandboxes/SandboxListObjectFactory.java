@@ -39,7 +39,7 @@ public class SandboxListObjectFactory {
 
     /**
      * Create an instance of {@link SandboxList }
-     * 
+     * @return SandboxList object
      */
     public SandboxList createSandboxlist() {
         return new SandboxList();
@@ -47,7 +47,7 @@ public class SandboxListObjectFactory {
 
     /**
      * Create an instance of {@link SandboxEntity }
-     * 
+     * @return Sandbox object
      */
     public Sandbox createSandboxType() {
         return new SandboxEntity();
@@ -55,7 +55,7 @@ public class SandboxListObjectFactory {
 
     /**
      * Create an instance of {@link CustomFieldType }
-     * 
+     * @return CustomFieldType object
      */
     public CustomFieldType createCustomFieldType() {
         return new CustomFieldType();

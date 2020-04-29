@@ -50,6 +50,7 @@ public class Issue {
      * Objects of the following type(s) are allowed in the list
      * {@link MitigationEntry }
      * 
+     * @return List of Mitigation objects
      * 
      */
     public List<Mitigation> getMitigationActions() {

@@ -51,7 +51,7 @@ public class DataPaths {
      * Objects of the following type(s) are allowed in the list
      * {@link CallStackType }
      * 
-     * 
+     * @return Returns a list of objects
      */
     public List<CallStackType> getCallstacks() {
         if (callstack == null) {

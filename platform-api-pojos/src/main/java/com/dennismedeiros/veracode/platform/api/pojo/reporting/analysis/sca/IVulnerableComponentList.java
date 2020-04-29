@@ -15,16 +15,12 @@ public interface IVulnerableComponentList {
 	 * 
 	 * <p>
 	 * For example, to add a new item, do as follows:
-	 * <pre>
-	 *    getComponent().add(newItem);
-	 * </pre>
-	 * 
 	 * 
 	 * <p>
 	 * Objects of the following type(s) are allowed in the list
 	 * {@link ComponentFile }
 	 * 
-	 * 
+	 * @return Return list of Component objects
 	 */
 	List<Component> getComponent();
 

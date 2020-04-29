@@ -55,7 +55,7 @@ public class SandboxType {
      * Objects of the following type(s) are allowed in the list
      * {@link CustomFieldType }
      * 
-     * 
+     * @return returns a list of CustomeFieldType
      */
     public List<CustomFieldType> getCustomfield() {
         if (customfield == null) {
@@ -66,7 +66,7 @@ public class SandboxType {
 
     /**
      * Gets the value of the sandboxId property.
-     * 
+     * @return returns the sandbox identifier
      */
     public long getSandboxId() {
         return sandboxId;
@@ -74,7 +74,8 @@ public class SandboxType {
 
     /**
      * Sets the value of the sandboxId property.
-     * 
+     * @param value
+     * 		value to set for sandbox identifier
      */
     public void setSandboxId(long value) {
         this.sandboxId = value;

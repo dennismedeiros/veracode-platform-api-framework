@@ -5,7 +5,12 @@
   <artifactId>veracode-platform-api-framework</artifactId>
   <packaging>pom</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>Platform API Framework</name>
+  <name>Veracode Platform API Framework</name>
+  <description>A Framework of several project that allow for processing of Veracode XML API data through calls with similar objects and functionality.</description>
+  <organization>
+	<name>dennismedeiros.com</name>
+	<url>http://www.dennismedeiros.com</url>
+  </organization>
   <properties>
  	<maven.compiler.source>1.8</maven.compiler.source> 
    	<maven.compiler.target>1.8</maven.compiler.target>  
@@ -57,15 +62,16 @@
 	    <version>1.2.0</version>
 	</dependency>
   </dependencies>
-<!--  <distributionManagement> -->
-    <!-- <snapshotRepository> -->
-        <!-- <id>snapshots</id> -->
-        <!-- <name>artifactory-snapshots</name> -->
-        <!-- <url></url> -->
-    <!-- </snapshotRepository> -->
-<!--  </distributionManagement> -->
+  <distributionManagement>
+  <!-- 
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>libs-snapshot</name>
+        <url>http://artifactory.local:8081/artifactory/libs-snapshot</url>
+    </snapshotRepository>
+    -->
+  </distributionManagement>
   <url>https://github.com/dennismedeiros/veracode-platform-api-framework</url>
-  <description>A Framework of several project that allow for processing of Veracode XML API data through calls with similar objects and functionality.</description>
   <modules>
   	<module>platform-api-pojos</module> 
 <!--  	<module>platform-api-core</module> -->

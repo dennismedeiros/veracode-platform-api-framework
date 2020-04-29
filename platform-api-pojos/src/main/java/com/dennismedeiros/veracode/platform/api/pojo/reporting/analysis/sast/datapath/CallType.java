@@ -25,21 +25,6 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
- * <pre>
- * &lt;complexType name="CallType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;attribute name="data_path" type="{http://www.w3.org/2001/XMLSchema}long" />
- *       &lt;attribute name="file_name" type="{https://analysiscenter.veracode.com/schema/2.0/callstacks}LongTextType" />
- *       &lt;attribute name="file_path" type="{https://analysiscenter.veracode.com/schema/2.0/callstacks}LongRequiredTextType" />
- *       &lt;attribute name="function_name" type="{https://analysiscenter.veracode.com/schema/2.0/callstacks}LongRequiredTextType" />
- *       &lt;attribute name="line_number" type="{http://www.w3.org/2001/XMLSchema}long" />
- *       &lt;attribute name="relative_location" type="{http://www.w3.org/2001/XMLSchema}int" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
- * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)

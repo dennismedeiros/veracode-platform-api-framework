@@ -22,8 +22,8 @@ public class PrescanResultsObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Prescanresults }
-     * 
+     * Create an instance of {@link PrescanResults }
+     * @return	PrescanResults object
      */
     public PrescanResults createPrescanresults() {
         return new PrescanResults();
@@ -31,7 +31,7 @@ public class PrescanResultsObjectFactory {
 
     /**
      * Create an instance of {@link ModuleFile }
-     * 
+     * @return ModuleFile object
      */
     public ModuleFile createModuleType() {
         return new ModuleFile();
@@ -39,7 +39,7 @@ public class PrescanResultsObjectFactory {
 
     /**
      * Create an instance of {@link IssueType }
-     * 
+     * @return IssueType object
      */
     public IssueType createIssueType() {
         return new IssueType();
@@ -47,7 +47,7 @@ public class PrescanResultsObjectFactory {
 
     /**
      * Create an instance of {@link FileIssue }
-     * 
+     * @return FileIssue object
      */
     public FileIssue createFileIssueType() {
         return new FileIssue();

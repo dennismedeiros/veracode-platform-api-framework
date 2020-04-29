@@ -24,7 +24,7 @@ public interface DataPath {
 	 * Objects of the following type(s) are allowed in the list
 	 * {@link CallType }
 	 * 
-	 * 
+	 * @return Returns a list of CallType
 	 */
 	List<CallType> getCall();
 

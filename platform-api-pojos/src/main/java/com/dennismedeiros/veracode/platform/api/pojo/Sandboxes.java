@@ -12,7 +12,7 @@ public interface Sandboxes {
 	 * @return
 	 *     possible object is
 	 *     {@link String }
-	 *     
+	 * 
 	 */
 	String getSandboxlistVersion();
 
@@ -28,25 +28,25 @@ public interface Sandboxes {
 
 	/**
 	 * Gets the value of the accountId property.
-	 * 
+	 * @return Account identifier
 	 */
 	long getAccountId();
 
 	/**
 	 * Sets the value of the accountId property.
-	 * 
+	 * @param value Sets the value for the account id
 	 */
 	void setAccountId(Long value);
 
 	/**
 	 * Gets the value of the appId property.
-	 * 
+	 * @return Returns Application Id
 	 */
 	long getAppId();
 
 	/**
 	 * Sets the value of the appId property.
-	 * 
+	 * @param value value of appid
 	 */
 	void setAppId(Long value);
 

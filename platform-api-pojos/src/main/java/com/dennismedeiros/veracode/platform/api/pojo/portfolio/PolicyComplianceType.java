@@ -17,18 +17,6 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Java class for PolicyComplianceType.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="PolicyComplianceType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="Calculating..."/>
- *     &lt;enumeration value="Not Assessed"/>
- *     &lt;enumeration value="Did Not Pass"/>
- *     &lt;enumeration value="Conditional Pass"/>
- *     &lt;enumeration value="Pass"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
- * </pre>
  * 
  */
 @XmlType(name = "PolicyComplianceType")

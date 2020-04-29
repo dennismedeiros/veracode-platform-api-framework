@@ -23,7 +23,9 @@ public class MitigationInfoObjectFactory {
 
     /**
      * Create an instance of {@link MitigationInfo }
-     * 
+     * @return
+	 *     possible object is
+	 *     {@link MitigationInfo }
      */
     public MitigationInfo createMitigationinfo() {
         return new MitigationInfo();
@@ -31,7 +33,9 @@ public class MitigationInfoObjectFactory {
 
     /**
      * Create an instance of {@link Issue }
-     * 
+       * @return
+	 *     possible object is
+	 *     {@link Issue }
      */
     public Issue createIssueType() {
         return new Issue();
@@ -39,7 +43,9 @@ public class MitigationInfoObjectFactory {
 
     /**
      * Create an instance of {@link ErrorMessage }
-     * 
+     * @return
+	 *     possible object is
+	 *     {@link ErrorMessage }
      */
     public ErrorMessage createErrorType() {
         return new ErrorMessage();
@@ -47,7 +53,9 @@ public class MitigationInfoObjectFactory {
 
     /**
      * Create an instance of {@link MitigationEntry }
-     * 
+     * @return
+	 *     possible object is
+	 *     {@link Mitigation }
      */
     public Mitigation createMitigationActionType() {
         return new MitigationEntry();

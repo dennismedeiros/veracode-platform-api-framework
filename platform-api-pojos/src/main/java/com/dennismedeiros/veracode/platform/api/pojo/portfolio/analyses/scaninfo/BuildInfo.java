@@ -87,7 +87,7 @@ public class BuildInfo {
 
     /**
      * Gets the value of the accountId property.
-     * 
+     * @return account identifier
      */
     public long getAccountId() {
         return accountId;
@@ -95,7 +95,7 @@ public class BuildInfo {
 
     /**
      * Sets the value of the accountId property.
-     * 
+     * @param value  value of the Account identifier
      */
     public void setAccountId(long value) {
         this.accountId = value;
@@ -103,7 +103,7 @@ public class BuildInfo {
 
     /**
      * Gets the value of the appId property.
-     * 
+     * @return application identifier
      */
     public long getAppId() {
         return appId;
@@ -111,7 +111,7 @@ public class BuildInfo {
 
     /**
      * Sets the value of the appId property.
-     * 
+     * @param value  value of the application portfolio identifier
      */
     public void setAppId(long value) {
         this.appId = value;
@@ -143,7 +143,7 @@ public class BuildInfo {
 
     /**
      * Gets the value of the buildId property.
-     * 
+     * @return value representing the build identifier.
      */
     public long getBuildId() {
         return buildId;
@@ -151,7 +151,8 @@ public class BuildInfo {
 
     /**
      * Sets the value of the buildId property.
-     * 
+     * @param value {@link Long} value to set for the build identifier
+     * 		
      */
     public void setBuildId(long value) {
         this.buildId = value;
