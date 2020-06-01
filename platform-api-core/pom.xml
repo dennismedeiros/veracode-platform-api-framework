@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>platform-api-core</artifactId>
+ 
+  <packaging>jar</packaging>
+  <name>Platform API Core</name>
+  <url>http://maven.apache.org</url>
+ 
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+  	<!-- Logging Dependencies -->
+	<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-api</artifactId>
+	    <version>1.7.25</version>
+	</dependency>
+	<dependency>
+		<groupId>com.dennismedeiros.veracode.platform.api</groupId>
+		<artifactId>platform-api-pojos</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+  </dependencies>
+
+  <parent>
+  	<groupId>com.dennismedeiros.veracode.platform.api</groupId>
+  	<artifactId>veracode-platform-api-framework</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  	<relativePath>../pom.xml</relativePath>
+  </parent>
+</project>
