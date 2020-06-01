@@ -45,7 +45,7 @@ public interface ManualAnalysis {
 	 * Objects of the following type(s) are allowed in the list
 	 * {@link String }
 	 * 
-	 * @return
+	 * @return Returns a list of String objects.
 	 */
 	List<String> getDeliveryConsultant();
 

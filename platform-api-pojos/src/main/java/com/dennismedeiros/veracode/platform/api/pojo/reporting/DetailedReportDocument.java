@@ -27,8 +27,8 @@ import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.mast.Man
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sast.StaticAnalysis;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sast.StaticAnalysisReport;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sast.StaticAnalysisFlaw;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sca.ISoftwareCompositionAnalysis;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sca.SoftwareCompositionAnalysis;
+import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sca.SoftwareCompositionAnalysisReport;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.common.Category;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.common.CustomFields;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.common.CustomFieldsList;
@@ -46,9 +46,8 @@ import com.dennismedeiros.veracode.platform.api.pojo.reporting.common.SeverityLe
  * As well as result information on each available analysis conducted up to the period of the reports creation. 
  * 
  * @author Dennis Medeiros
- * 
- * @since 1.0
- * @version 1.0
+ * @since 1.0.0
+ * @version 1.0.0
  */
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlType(propOrder = {
@@ -63,111 +62,118 @@ import com.dennismedeiros.veracode.platform.api.pojo.reporting.common.SeverityLe
 @XmlRootElement(name = "detailedreport")
 public class DetailedReportDocument implements DetailedReport {
 	
-    @XmlElement(name = "static-analysis", type = StaticAnalysisReport.class)
-    protected StaticAnalysis staticAnalysis;
+    @XmlTransient protected List<Find> _dyanmicflaws;
     
-    @XmlElement(name = "dynamic-analysis", type = DynamicAnalysisReport.class)
-    protected DynamicAnalysis dynamicAnalysis;
+    @XmlTransient protected List<Find> _manualflaws;
     
-    @XmlElement(name = "manual-analysis", type = ManualAnalysisReport.class)
-    protected ManualAnalysis manualAnalysis;
-    
-    @XmlElement(required = true, type = SeverityLevel.class)
-    protected List<Severity> severity;
-    
-    @XmlElement(name = "flaw-status", type=FlawStatusSummary.class, required = true)
-    protected FlawStatus flawStatus;
-    protected CustomFieldsList customfields;
-    
-    @XmlElement(name = "software_composition_analysis", type=SoftwareCompositionAnalysis.class)
-    protected ISoftwareCompositionAnalysis softwareCompositionAnalysis;
+    @XmlTransient protected List<Find> _staticflaws;
     
     @XmlAttribute(name = "account_id", required = true)
     protected Long accountid;
-	
-    @XmlAttribute(name = "report_format_version", required = true)
-    protected String reportFormatVersion;
-    
-    @XmlAttribute(name = "app_name", required = true)
-    protected String appName;
-    
-    @XmlAttribute(name = "app_id", required = true)
-    protected long appId;
     
     @XmlAttribute(name="analysis_id")
     protected String analysisid;
     
-    @XmlAttribute(name = "sandbox_name")
-    protected String sandboxName;
-    @XmlAttribute(name = "sandbox_id")
-    protected long sandboxId;
-    @XmlAttribute(name = "first_build_submitted_date")
-    protected String firstBuildSubmittedDate;
-    @XmlAttribute(name = "version", required = true)
-    protected String version;
-    @XmlAttribute(name = "build_id", required = true)
-    protected long buildId;
-    @XmlAttribute(name = "vendor")
-    protected String vendor;
-    @XmlAttribute(name = "submitter", required = true)
-    protected String submitter;
-    @XmlAttribute(name = "platform", required = true)
-    protected String platform;
-    @XmlAttribute(name = "assurance_level")
-    protected BigInteger assuranceLevel;
-    @XmlAttribute(name = "business_criticality")
-    protected BigInteger businessCriticality;
-    @XmlAttribute(name = "generation_date", required = true)
-    protected String generationDate;
-    @XmlAttribute(name = "veracode_level", required = true)
-    protected String veracodeLevel;
-    @XmlAttribute(name = "total_flaws")
-    protected BigInteger totalFlaws;
-    @XmlAttribute(name = "flaws_not_mitigated")
-    protected BigInteger flawsNotMitigated;
-    @XmlAttribute(name = "teams", required = true)
-    protected String teams;
-    @XmlAttribute(name = "life_cycle_stage", required = true)
-    protected String lifeCycleStage;
-    @XmlAttribute(name = "planned_deployment_date")
-    protected String plannedDeploymentDate;
-    @XmlAttribute(name = "last_update_time", required = true)
-    protected String lastUpdateTime;
-    @XmlAttribute(name = "is_latest_build", required = true)
-    protected boolean isLatestBuild;
-    @XmlAttribute(name = "policy_name", required = true)
-    protected String policyName;
-    @XmlAttribute(name = "policy_version", required = true)
-    protected BigInteger policyVersion;
-    @XmlAttribute(name = "policy_compliance_status", required = true)
-    protected String policyComplianceStatus;
-    @XmlAttribute(name = "policy_rules_status", required = true)
-    protected String policyRulesStatus;
-    @XmlAttribute(name = "grace_period_expired", required = true)
-    protected boolean gracePeriodExpired;
-    @XmlAttribute(name = "scan_overdue", required = true)
-    protected String scanOverdue;
     @XmlAttribute(name = "any_type_scan_due")
     protected String anyTypeScanDue;
-    @XmlAttribute(name = "business_owner")
+    
+    @XmlAttribute(name = "app_id", required = true)
+    protected long appId;
+    
+    @XmlAttribute(name = "app_name", required = true)
+    protected String appName;
+	
+    @XmlAttribute(name = "assurance_level")
+    protected BigInteger assuranceLevel;
+    
+    @XmlAttribute(name = "build_id", required = true)
+    protected long buildId;
+    
+    @XmlAttribute(name = "business_criticality")
+    protected BigInteger businessCriticality;
+
+	@XmlAttribute(name = "business_owner")
     protected String businessOwner;
+    
     @XmlAttribute(name = "business_unit")
     protected String businessUnit;
-    @XmlAttribute(name = "tags")
-    protected String tags;
+    
+    protected CustomFieldsList customfields;
+    @XmlElement(name = "dynamic-analysis", type = DynamicAnalysisReport.class)
+    protected DynamicAnalysis dynamicAnalysis;
+    @XmlAttribute(name = "first_build_submitted_date")
+    protected String firstBuildSubmittedDate;
+    @XmlAttribute(name = "flaws_not_mitigated")
+    protected BigInteger flawsNotMitigated;
+    @XmlElement(name = "flaw-status", type=FlawStatusSummary.class, required = true)
+    protected FlawStatus flawStatus;
+    @XmlAttribute(name = "generation_date", required = true)
+    protected String generationDate;
+    @XmlAttribute(name = "grace_period_expired", required = true)
+    protected boolean gracePeriodExpired;
+    @XmlAttribute(name = "is_latest_build", required = true)
+    protected boolean isLatestBuild;
+    @XmlAttribute(name = "last_update_time", required = true)
+    protected String lastUpdateTime;
     @XmlAttribute(name = "legacy_scan_engine")
     protected boolean legacyScanEngine;
+    @XmlAttribute(name = "life_cycle_stage", required = true)
+    protected String lifeCycleStage;
+    @XmlElement(name = "manual-analysis", type = ManualAnalysisReport.class)
+    protected ManualAnalysis manualAnalysis;
+    @XmlAttribute(name = "planned_deployment_date")
+    protected String plannedDeploymentDate;
+    @XmlAttribute(name = "platform", required = true)
+    protected String platform;
+    @XmlAttribute(name = "policy_compliance_status", required = true)
+    protected String policyComplianceStatus;
+    @XmlAttribute(name = "policy_name", required = true)
+    protected String policyName;
+    @XmlAttribute(name = "policy_rules_status", required = true)
+    protected String policyRulesStatus;
+    @XmlAttribute(name = "policy_version", required = true)
+    protected BigInteger policyVersion;
+    @XmlAttribute(name = "report_format_version", required = true)
+    protected String reportFormatVersion;
+    @XmlAttribute(name = "sandbox_id")
+    protected long sandboxId;
+    @XmlAttribute(name = "sandbox_name")
+    protected String sandboxName;
+    @XmlAttribute(name = "scan_overdue", required = true)
+    protected String scanOverdue;
+    @XmlElement(required = true, type = SeverityLevel.class)
+    protected List<Severity> severity;
+    @XmlElement(name = "software_composition_analysis", type=SoftwareCompositionAnalysisReport.class)
+    protected SoftwareCompositionAnalysis softwareCompositionAnalysis;
+    @XmlElement(name = "static-analysis", type = StaticAnalysisReport.class)
+    protected StaticAnalysis staticAnalysis;
+    @XmlAttribute(name = "submitter", required = true)
+    protected String submitter;
+    @XmlAttribute(name = "tags")
+    protected String tags;
+    @XmlAttribute(name = "teams", required = true)
+    protected String teams;
+    @XmlAttribute(name = "total_flaws")
+    protected BigInteger totalFlaws;
+    @XmlAttribute(name = "vendor")
+    protected String vendor;
     
-    @XmlTransient protected List<Find> _staticflaws;
-    @XmlTransient protected List<Find> _dyanmicflaws;
-    @XmlTransient protected List<Find> _manualflaws;
-    
+    @XmlAttribute(name = "veracode_level", required = true)
+    protected String veracodeLevel;
+    @XmlAttribute(name = "version", required = true)
+    protected String version;
+    /**
+     * {@inheritDoc}
+     */
     @Override
 	public Long getAccountId() {
 		return accountid;
 	}
-    
-    public String getAnalysisId() {
+   
+    /**
+     * {@inheritDoc}
+     */
+    public String getOriginAnalysisId() {
 		return this.analysisid;
 	}
     /**
@@ -201,6 +207,13 @@ public class DetailedReportDocument implements DetailedReport {
     /**
      * {@inheritDoc}
      */
+	@Override
+	public Long getBuildId() {
+		return buildId;
+	}
+    /**
+     * {@inheritDoc}
+     */
     @Override
 	public Long getBusinessCriticality() {
         return businessCriticality.longValue();
@@ -230,49 +243,29 @@ public class DetailedReportDocument implements DetailedReport {
      * {@inheritDoc}
      */
     @Override
-	public Analysis getDynamicAnalysis() {
-        throw new UnsupportedOperationException("Not yet supported."); 
-    }
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-	public List<Find> getDynamicAnalysisFindings() {
+	public DynamicAnalysis getDynamicAnalysisSecurityTestingReport() {
     	
-    	if(this._dyanmicflaws == null) {
-	    	List<Find> dynamicflaws = new ArrayList<Find>();
+    	if(this.dynamicAnalysis != null) {
+    	
+	    	DynamicAnalysisReport dynamicanalysisreport = (DynamicAnalysisReport)this.dynamicAnalysis;
+	    	List<Find> finds = this.getDynamicAnalysisFindings();
 	    	
-	    	List<Severity> severities = this.severity;
-	    	Iterator<Severity> itsev = severities.iterator();
-	    	while(itsev.hasNext()) {
-	    		Severity severity = itsev.next();
-	    		
-	    		List<Category> cats = severity.getCategories();
-	    		if(cats != null) {
-		    		Iterator<Category> itcat = cats.iterator(); 
-		    		while(itcat.hasNext()) {
-		    			Category cat = itcat.next();
-		    			
-		    			List<CweCategory> cwes = cat.getCWEs();
-		    			Iterator<CweCategory> itcwe = cwes.iterator();
-		    			while(itcwe.hasNext()) {
-		        			CweCategory cweSubject = itcwe.next();
-		        			if(cweSubject != null) {
-			        			List<DynamicAnalysisFlawFind> flawlist = cweSubject.getDynamicAnalysisFlaws();
-			        			if(flawlist != null && flawlist.size() > 0) {
-				        			dynamicflaws.addAll(flawlist);
-			        			}
-		        			}
-		        		}
-		    		}
-	    		}
+	    	try {
+	    		//Class<?> staticanalysisclass = dynamicanalysisreport.getClass();
+		    	Class[] cArgs = new Class[1];
+	    		cArgs[0] = List.class;
+		    	Method privateListMethod = DynamicAnalysisReport.class.getSuperclass().getDeclaredMethod("setFindings", cArgs);
+		    	privateListMethod.setAccessible(true);
+		    	privateListMethod.invoke(dynamicanalysisreport, finds);
+		    	
+		    }catch(Exception e) {
+		    	e.printStackTrace();
 	    	}
-	    	this._dyanmicflaws = dynamicflaws;
-    	} 
-    	
-    	return this._dyanmicflaws;
-	}
-    /**
+    	}
+    	return dynamicAnalysis;
+    }
+
+	/**
      * {@inheritDoc}
      */
     @Override
@@ -314,49 +307,12 @@ public class DetailedReportDocument implements DetailedReport {
 	public String getLifeCycleStage() {
         return lifeCycleStage;
     }
-    /**
+
+	/**
      * {@inheritDoc}
      */
     @Override
-	public List<Find> getManualAnalysisFindings() {
-    	if(this._manualflaws == null) {
-	    	List<Find> manualflaws = new ArrayList<Find>();
-	    	
-	    	List<Severity> severities = this.severity;
-	    	Iterator<Severity> itsev = severities.iterator();
-	    	while(itsev.hasNext()) {
-	    		Severity severity = itsev.next();
-	    		
-	    		List<Category> cats = severity.getCategories();
-	    		if(cats != null) {
-		    		Iterator<Category> itcat = cats.iterator(); 
-		    		while(itcat.hasNext()) {
-		    			Category cat = itcat.next();
-		    			
-		    			List<CweCategory> cwes = cat.getCWEs();
-		    			Iterator<CweCategory> itcwe = cwes.iterator();
-		    			while(itcwe.hasNext()) {
-		        			CweCategory cweSubject = itcwe.next();
-		        			if(cweSubject != null) {
-			        			List<ManualAnalysisFlawFind> flawlist = cweSubject.getManualAnalysisFlaws();
-			        			if(flawlist != null) {
-				        			manualflaws.addAll(flawlist);
-			        			}
-		        			}
-		        		}
-		    		}
-	    		}
-	    	}
-	    	this._manualflaws = manualflaws;
-    	} 
-    	
-    	return this._manualflaws;
-	}
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-	public ManualAnalysis getManualPenetrationTestingAnalysis() {
+	public ManualAnalysis getManualAnalysisSecurityTestingReport() {
         return manualAnalysis;
     }
     /**
@@ -379,7 +335,7 @@ public class DetailedReportDocument implements DetailedReport {
     @Override
 	public String getPolicyComplianceStatus() {
         return policyComplianceStatus;
-    }  
+    }
     /**
      * {@inheritDoc}
      */
@@ -393,7 +349,7 @@ public class DetailedReportDocument implements DetailedReport {
     @Override
 	public String getPolicyRulesStatus() {
         return policyRulesStatus;
-    }
+    }  
     /**
      * {@inheritDoc}
      */
@@ -408,7 +364,7 @@ public class DetailedReportDocument implements DetailedReport {
 	public String getReportFormatVersion() {
         return reportFormatVersion;
     }
-     /**
+    /**
       * {@inheritDoc}
       */
     @Override
@@ -422,7 +378,7 @@ public class DetailedReportDocument implements DetailedReport {
 	public String getSandboxName() {
         return sandboxName;
     }
-    /**
+     /**
      * {@inheritDoc}
      */
     @Override
@@ -457,69 +413,33 @@ public class DetailedReportDocument implements DetailedReport {
      * {@inheritDoc}
      */
     @Override
-	public ISoftwareCompositionAnalysis getSoftwareCompositionAnalysis() {
+	public SoftwareCompositionAnalysis getSoftwareCompositionAnalysisReport() {
         return softwareCompositionAnalysis;
     }
     /**
      * {@inheritDoc}
      */
     @Override
-	public StaticAnalysis getStaticAnalysis() {
+	public StaticAnalysis getStaticAnalysisSecurityTestingReport() {
     	
-    	StaticAnalysisReport staticanalysisreport = (StaticAnalysisReport)this.staticAnalysis;
-    	List<Find> finds = this.getStaticAnalysisFindings();
-    	
-    	try {
-    		Class<?> staticanalysisclass = staticanalysisreport.getClass();
-	    	Class[] cArgs = new Class[1];
-    		cArgs[0] = List.class;
-	    	Method privateListMethod = StaticAnalysisReport.class.getDeclaredMethod("setFindings", cArgs);
-	    	privateListMethod.setAccessible(true);
-	    	privateListMethod.invoke(staticanalysisreport, finds);
+    	if(this.staticAnalysis != null) {
 	    	
-	    }catch(Exception e) {
-	    	e.printStackTrace();
-    	}
-    	
-    	return staticAnalysis;
-    }
-    /**
-     * {@inheritDoc}
-     */
-    protected List<Find> getStaticAnalysisFindings() {
-    	
-    	if(this._staticflaws == null) {
-	    	List<Find> staticflaws = new ArrayList<Find>();
+	    	StaticAnalysisReport staticanalysisreport = (StaticAnalysisReport)this.staticAnalysis;
+	    	List<Find> finds = this.getStaticAnalysisFindings();
 	    	
-	    	List<Severity> severities = this.severity;
-	    	Iterator<Severity> itsev = severities.iterator();
-	    	while(itsev.hasNext()) {
-	    		Severity severity = itsev.next();
-	    		
-	    		List<Category> cats = severity.getCategories();
-	    		if(cats != null) {
-		    		Iterator<Category> itcat = cats.iterator(); 
-		    		while(itcat.hasNext()) {
-		    			Category cat = itcat.next();
-		    			
-		    			List<CweCategory> cwes = cat.getCWEs();
-		    			Iterator<CweCategory> itcwe = cwes.iterator();
-		    			while(itcwe.hasNext()) {
-		        			CweCategory cweSubject = itcwe.next();
-		        			if(cweSubject != null) {
-			        			List<StaticAnalysisFlaw> flawlist = cweSubject.getStaticAnalysisFlaws();
-			        			if(flawlist != null && flawlist.size() > 0) {
-			        				staticflaws.addAll(flawlist);
-			        			}
-		        			}
-		        		}
-		    		}
-	    		}
+	    	try {
+	    		//Class<?> staticanalysisclass = staticanalysisreport.getClass().getSuperclass();
+		    	Class[] cArgs = new Class[1];
+	    		cArgs[0] = List.class;
+		    	Method privateListMethod = StaticAnalysisReport.class.getSuperclass().getDeclaredMethod("setFindings", cArgs);
+		    	privateListMethod.setAccessible(true);
+		    	privateListMethod.invoke(staticanalysisreport, finds);
+		    	
+		    }catch(Exception e) {
+		    	e.printStackTrace();
 	    	}
-	    	this._staticflaws = staticflaws;
-    	} 
-    	
-    	return this._staticflaws;
+    	}
+    	return staticAnalysis;
     }
     /**
      * {@inheritDoc}
@@ -574,7 +494,7 @@ public class DetailedReportDocument implements DetailedReport {
      * {@inheritDoc}
      */
 	@Override
-	public Boolean hasScan(AnalysisReportType analysisReportType) {
+	public Boolean hasAnalysisType(AnalysisReportType analysisReportType) {
 		boolean bResult = false;
 		
 		switch(analysisReportType) {
@@ -625,20 +545,55 @@ public class DetailedReportDocument implements DetailedReport {
     	
     	return result;
     }
-
+    private List<Find> getDynamicAnalysisFindings() {
+    	
+    	if(this._dyanmicflaws == null) {
+	    	List<Find> dynamicflaws = new ArrayList<Find>();
+	    	
+	    	List<Severity> severities = this.severity;
+	    	Iterator<Severity> itsev = severities.iterator();
+	    	while(itsev.hasNext()) {
+	    		Severity severity = itsev.next();
+	    		
+	    		List<Category> cats = severity.getCategories();
+	    		if(cats != null) {
+		    		Iterator<Category> itcat = cats.iterator(); 
+		    		while(itcat.hasNext()) {
+		    			Category cat = itcat.next();
+		    			
+		    			List<CweCategory> cwes = cat.getCWEs();
+		    			Iterator<CweCategory> itcwe = cwes.iterator();
+		    			while(itcwe.hasNext()) {
+		        			CweCategory cweSubject = itcwe.next();
+		        			if(cweSubject != null) {
+			        			List<DynamicAnalysisFlawFind> flawlist = cweSubject.getDynamicAnalysisFlaws();
+			        			if(flawlist != null && flawlist.size() > 0) {
+				        			dynamicflaws.addAll(flawlist);
+			        			}
+		        			}
+		        		}
+		    		}
+	    		}
+	    	}
+	    	this._dyanmicflaws = dynamicflaws;
+    	} 
+    	
+    	return this._dyanmicflaws;
+	}
     private void setAccountId(Long accountid) {
 		this.accountid = accountid;
 	}
-
     private void setAnalysisId(String analysisid) {
 		this.analysisid = analysisid;
 	}
+
     /**
      * {@inheritDoc}
      */
     private void setAnyTypeScanDue(String value) {
         this.anyTypeScanDue = value;
     }
+
     /**
      * {@inheritDoc}
      */
@@ -657,7 +612,6 @@ public class DetailedReportDocument implements DetailedReport {
     private void setAssuranceLevel(Long value) {
         this.assuranceLevel = BigInteger.valueOf(value);
     }
-
     /**
      * Sets the value of the buildId property.
      * 
@@ -665,7 +619,6 @@ public class DetailedReportDocument implements DetailedReport {
     private void setBuildId(Long value) {
         this.buildId = value;
     }
-
     /**
      * Sets the value of the businessCriticality property.
      * 
@@ -963,10 +916,10 @@ public class DetailedReportDocument implements DetailedReport {
      * 
      * @param value
      *     allowed object is
-     *     {@link SoftwareCompositionAnalysis }
+     *     {@link SoftwareCompositionAnalysisReport }
      *     
      */
-    private void setSoftwareCompositionAnalysis(ISoftwareCompositionAnalysis value) {
+    private void setSoftwareCompositionAnalysis(SoftwareCompositionAnalysis value) {
         this.softwareCompositionAnalysis = value;
     }
 
@@ -1064,5 +1017,79 @@ public class DetailedReportDocument implements DetailedReport {
      */
     private void setVersion(String value) {
         this.version = value;
+    }
+
+    protected List<Find> getManualAnalysisFindings() {
+    	if(this._manualflaws == null) {
+	    	List<Find> manualflaws = new ArrayList<Find>();
+	    	
+	    	List<Severity> severities = this.severity;
+	    	Iterator<Severity> itsev = severities.iterator();
+	    	while(itsev.hasNext()) {
+	    		Severity severity = itsev.next();
+	    		
+	    		List<Category> cats = severity.getCategories();
+	    		if(cats != null) {
+		    		Iterator<Category> itcat = cats.iterator(); 
+		    		while(itcat.hasNext()) {
+		    			Category cat = itcat.next();
+		    			
+		    			List<CweCategory> cwes = cat.getCWEs();
+		    			Iterator<CweCategory> itcwe = cwes.iterator();
+		    			while(itcwe.hasNext()) {
+		        			CweCategory cweSubject = itcwe.next();
+		        			if(cweSubject != null) {
+			        			List<ManualAnalysisFlawFind> flawlist = cweSubject.getManualAnalysisFlaws();
+			        			if(flawlist != null) {
+				        			manualflaws.addAll(flawlist);
+			        			}
+		        			}
+		        		}
+		    		}
+	    		}
+	    	}
+	    	this._manualflaws = manualflaws;
+    	} 
+    	
+    	return this._manualflaws;
+	}
+
+    /**
+     * {@inheritDoc}
+     */
+    protected List<Find> getStaticAnalysisFindings() {
+    	
+    	if(this._staticflaws == null) {
+	    	List<Find> staticflaws = new ArrayList<Find>();
+	    	
+	    	List<Severity> severities = this.severity;
+	    	Iterator<Severity> itsev = severities.iterator();
+	    	while(itsev.hasNext()) {
+	    		Severity severity = itsev.next();
+	    		
+	    		List<Category> cats = severity.getCategories();
+	    		if(cats != null) {
+		    		Iterator<Category> itcat = cats.iterator(); 
+		    		while(itcat.hasNext()) {
+		    			Category cat = itcat.next();
+		    			
+		    			List<CweCategory> cwes = cat.getCWEs();
+		    			Iterator<CweCategory> itcwe = cwes.iterator();
+		    			while(itcwe.hasNext()) {
+		        			CweCategory cweSubject = itcwe.next();
+		        			if(cweSubject != null) {
+			        			List<StaticAnalysisFlaw> flawlist = cweSubject.getStaticAnalysisFlaws();
+			        			if(flawlist != null && flawlist.size() > 0) {
+			        				staticflaws.addAll(flawlist);
+			        			}
+		        			}
+		        		}
+		    		}
+	    		}
+	    	}
+	    	this._staticflaws = staticflaws;
+    	} 
+    	
+    	return this._staticflaws;
     }
 }

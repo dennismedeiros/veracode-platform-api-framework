@@ -47,7 +47,6 @@ hs_err_pid*
 # under development projects
 *platform-api-provider-vosp-mitigation/
 *platform-api-provider-vosp-proxy/
-*platform-api-sdk/
 *platform-api-services-core/
 *platform-api-services-vosp/
 *platform-api-services-vosp-proxy/

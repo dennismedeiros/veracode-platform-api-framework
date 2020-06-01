@@ -8,14 +8,10 @@
 
 package com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sast;
 
-import java.lang.reflect.Field;
 import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
-import javax.lang.model.element.Modifier;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -46,6 +42,17 @@ public class StaticAnalysisReport extends AnalysisReport implements StaticAnalys
     @XmlAttribute(name = "scan_exit_status_desc")
     protected String scanExitStatusDesc;
 
+    //Constructor
+    protected StaticAnalysisReport() { super(); }
+    
+    public StaticAnalysisReport(Long Id, String name, Find[] findings) {
+    	super();
+    	
+    	this.id = Id;
+    	this.scanName = name;
+    	//this.findings;
+    }
+    
     @Override
 	public List<Module> getModules() {
         return modules;
@@ -115,7 +122,7 @@ public class StaticAnalysisReport extends AnalysisReport implements StaticAnalys
 		return this.findings;
 	}
 
-	protected void setFindings(List<Find> finds) {
-		this.findings = finds;
+	public Boolean isSandbox() {
+		return false;
 	}
 }

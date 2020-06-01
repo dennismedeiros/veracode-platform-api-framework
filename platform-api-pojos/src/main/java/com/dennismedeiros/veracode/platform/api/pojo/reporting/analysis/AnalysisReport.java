@@ -49,6 +49,11 @@ public abstract class AnalysisReport implements Analysis {
 	@XmlTransient protected Long id;
 	@XmlTransient protected List<Find> findings;
     
+	@Override
+	public Long getId() {
+		return id;
+	}
+	
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.detailedreport.IAnalysisType#getEngineVersion()
 	 */

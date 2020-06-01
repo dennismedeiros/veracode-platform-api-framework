@@ -2,12 +2,11 @@ package com.dennismedeiros.veracode.platform.api.pojo.reporting;
 
 import java.util.List;
 
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.Analysis;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.AnalysisReportType;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.Find;
+import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.dast.DynamicAnalysis;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.mast.ManualAnalysis;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sast.StaticAnalysis;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sca.ISoftwareCompositionAnalysis;
+import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sca.SoftwareCompositionAnalysis;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.common.CustomFieldsList;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.common.FlawStatus;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.common.Severity;
@@ -15,8 +14,6 @@ import com.dennismedeiros.veracode.platform.api.pojo.reporting.common.Severity;
 
 /**
  * Common interface for Detailed Report document types.
- * 
- * 
  * 
  * @author Dennis Medeiros
  * @since 1.0.0
@@ -31,11 +28,11 @@ public interface DetailedReport {
 	 */
 	Long getAccountId();
 	/**
-	 * Returns the unique identifier of the analysis that was created by the system. 
+	 * Returns the unique identifier of the first analysis that was created by the system. 
 	 * 
 	 * @return {@link String}
 	 */
-	String getAnalysisId();
+	String getOriginAnalysisId();
 	/**
 	 * Returns the date and time of any scans that are do by policy. 
 	 * 
@@ -58,6 +55,11 @@ public interface DetailedReport {
 	 */
 	Long getAssuranceLevel();
 	/**
+	 * Returns that static analysis un
+	 * @return the buildId
+	 */
+	Long getBuildId();
+	/**
 	 * Returns the Business Criticality Level assigned to the Application Portfolio.
 	 * @return {@link Long}
 	 */
@@ -78,22 +80,22 @@ public interface DetailedReport {
 	 */
 	CustomFieldsList getCustomFields();
 	/**
-	 * Returns the dynamic analysis as a common analysis object.
-	 * @return {@link Analysis}
+	 * Returns the Dynamic Analysis Security Testing (DAST) related report of the detailed report, if conducted.
+	 * <P>
+	 * If Dynamic Analysis Security Testing (DAST) was conducted during Detailed Report period. The 
+	 * method returns an object with the {@link DynamicAnalysis} interface. Else method returns null 
+	 * if there was no DAST performed. 
+	 * 
+	 * @return Returns a object with interface of {@link DynamicAnalysis}.
 	 */
-	Analysis getDynamicAnalysis();
-	/**
-	 * @deprecated
-	 * Returns the list of dynamic findings.
-	 * @return Returns x y z
-	 */
-	List<Find> getDynamicAnalysisFindings();
+	DynamicAnalysis getDynamicAnalysisSecurityTestingReport();
 	/**
 	 * @deprecated
 	 * Returns the date that the first static analysis was submitted to the application portfolio.
 	 * @return {@link String}
 	 */
 	String getFirstBuildSubmittedDate();
+	
 	/**
 	 * Returns the total number of findings from the report that are not mitigated.
 	 * @return {@link Long} 
@@ -107,7 +109,6 @@ public interface DetailedReport {
 	 * @return {@link String}
 	 */
 	String getGenerationDate();
-	
 	String getLastUpdateTime();
 	/**
 	 * Returns the LifeCycle State that the application is within based on the application portfolio settings.
@@ -115,45 +116,37 @@ public interface DetailedReport {
 	 */
 	String getLifeCycleStage();
 	/**
-	 * @deprecated
-	 * Returns the list of manual findings.
-	 * @return Returns x y z
-	 */
-	List<Find> getManualAnalysisFindings();
-	/**
 	 * Returns the report of Manual Penetration Analysis related to the application portfolio, if conducted.
 	 * @return {@link ManualAnalysis}
 	 */
-	ManualAnalysis getManualPenetrationTestingAnalysis();
-	String getPlannedDeploymentDate();
+	ManualAnalysis getManualAnalysisSecurityTestingReport();
 	
+	String getPlannedDeploymentDate();
 	String getPlatform();
 	String getPolicyComplianceStatus();
-	String getPolicyName();
 	
+	String getPolicyName();
 	String getPolicyRulesStatus();
-	Long getPolicyVersion();
 
+	Long getPolicyVersion();
 	String getReportFormatVersion();
 	/**
-	 * @deprecated
 	 * Returns the unique identifier that represents that sandbox.
 	 * @return {@link Long}
 	 */
 	Long getSandboxId();
 	/**
-	 * @deprecated
 	 * Returns the name of the sandbox that contains that static analysis result. 
 	 * @return Returns x y z
 	 */
 	String getSandboxName();
+
 	/**
 	 * @deprecated
 	 * Returns the unique identifier used to represent that analysis that was performed.
 	 * @return {@link Long}
 	 */
 	Long getScanId();
-
 	/**
 	 * @deprecated
 	 * Returns the name used to represent that analysis that was performed.
@@ -167,21 +160,31 @@ public interface DetailedReport {
 	 */
 	List<Severity> getSeverities();
 	/**
-	 * Returns the report on the Software Composition Analysis related to the application portfolio, if conducted.
-	 * @return Returns an object of ISoftwareCompositionAnalysis interface type
+	 * Returns the Software Composition Analysis (SCA) related related report of the application portfolio, if conducted.
+	 * <P>
+	 * If Software Composition Analysis (SCA)  was conducted during Detailed Report period. The 
+	 * method returns an object with the {@link SoftwareCompositionAnalysis} interface. Else method returns null 
+	 * if there was no SCA performed. 
+	 * 
+	 * @return Returns a object with interface of {@link SoftwareCompositionAnalysis}.
 	 */
-	ISoftwareCompositionAnalysis getSoftwareCompositionAnalysis();
+	SoftwareCompositionAnalysis getSoftwareCompositionAnalysisReport();
 	/**
-	 * Returns the report that Static Analysis related to the application portfolio, if conducted.
-	 * @return {@link StaticAnalysis}
+	 * Returns the Static Analysis Security Testing (SAST) related report of the detailed report, if conducted.
+	 * <P>
+	 * If Static Analysis Security Testing (SAST) was conducted during Detailed Report period. The 
+	 * method returns an object with the {@link StaticAnalysis} interface. Else method returns null 
+	 * if there was no SAST performed. 
+	 * 
+	 * @return Returns a object with interface of {@link StaticAnalysis}.
 	 */
-	StaticAnalysis getStaticAnalysis();
+	StaticAnalysis getStaticAnalysisSecurityTestingReport();
+
 	/**
 	 * Returns the submitter of the report analysis used to produce the detailed report.
 	 * @return {@link String}
 	 */
 	String getSubmitter();
-
 	/**
 	 * Returns tags as a comma delimited string.
 	 * @return {@link String}
@@ -219,14 +222,14 @@ public interface DetailedReport {
 	 * @param analysisReportType the analysis report type to search if the document contains.
 	 * @return {@link Boolean}
 	 */
-	Boolean hasScan(AnalysisReportType analysisReportType);
-	/**
+	Boolean hasAnalysisType(AnalysisReportType analysisReportType);
+    /**
 	 * @deprecated
 	 * Returns true if the report contains the most recent static analysis conducted. 
 	 * @return {@link Boolean}
 	 */
 	Boolean isLatestBuild();
-    /**
+	/**
      * @deprecated
      * Indicates if the scanning engine being used is a legacyScanEngine.
      * 

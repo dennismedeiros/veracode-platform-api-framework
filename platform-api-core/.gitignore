@@ -1,0 +1,11 @@
+### Maven ###
+target/
+
+### Maven Site ###
+doc/
+
+### Eclipse ###
+.settings/
+.classpath
+.project
+.sts4-cache
