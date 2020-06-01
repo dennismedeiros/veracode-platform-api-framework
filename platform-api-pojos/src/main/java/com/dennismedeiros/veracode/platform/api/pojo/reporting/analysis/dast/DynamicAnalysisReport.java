@@ -18,10 +18,6 @@ import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.Analysis
 @XmlAccessorType(XmlAccessType.NONE)
 public class DynamicAnalysisReport extends AnalysisReport implements DynamicAnalysis {
 
-	//@XmlElementWrapper(name = "modules")
-    //@XmlElement(name="module", type=ModuleFile.class)
-	//private List<Module> modules;
-        
     @XmlAttribute(name = "rating", required = true)
     protected String rating;
     @XmlAttribute(name = "score", required = true)
@@ -47,7 +43,8 @@ public class DynamicAnalysisReport extends AnalysisReport implements DynamicAnal
     @XmlAttribute(name = "scan_exit_status_desc")
     protected String scanExitStatusDesc;
 
-   
+    protected DynamicAnalysisReport() { super(); }
+    
     /* (non-Javadoc)
 	 * @see com.veracode.platform.parsers.jaxb.templates.detailedreport.IAnalysisType#getRating()
 	 */

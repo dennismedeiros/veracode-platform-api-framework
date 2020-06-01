@@ -2,7 +2,6 @@ package com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis;
 
 import java.math.BigInteger;
 import java.time.Instant;
-import java.time.ZonedDateTime;
 import java.util.List;
 
 /**
@@ -13,7 +12,17 @@ import java.util.List;
  *
  */
 public interface Analysis {
-
+	
+	/**
+	 * Gets the value of the analysis unique identifier
+	 * 
+	 * @return
+	 *     possible object is
+	 *     {@link Long }
+	 *     
+	 */
+	Long getId();
+	
 	/**
 	 * Gets the value of the modules property.
 	 * 

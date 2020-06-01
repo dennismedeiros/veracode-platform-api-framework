@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appinfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://analysiscenter.veracode.com/schema/2.0/appinfo" xsi:schemaLocation="https://analysiscenter.veracode.com/schema/2.0/appinfo https://analysiscenter.veracode.com/resource/2.0/appinfo.xsd" appinfo_version="1.1" account_id="32818">
+<application app_id="112029" app_name="WebGoat" description="WebGoat is a teaching web application illustrating common web vulnerabilities." business_criticality="Very High" policy="Veracode Transitional Very High" policy_updated_date="2016-07-21T10:08:35-04:00" teams="Demo Team" origin="Open Source" industry_vertical="Other" app_type="Other" deployment_method="Not Specified" is_web_application="true" archer_app_name="2501" modified_date="2016-07-21T10:21:03-04:00" cots="false" vast="false" business_unit="Not Specified" tags="">
+<customfield name="Custom 1" value=""/>
+<customfield name="Custom 2" value=""/>
+<customfield name="Custom 3" value=""/>
+<customfield name="Custom 4" value=""/>
+<customfield name="Custom 5" value=""/>
+</application>
+</appinfo>

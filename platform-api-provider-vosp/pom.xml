@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>platform-api-provider-vosp</artifactId>
+  <packaging>jar</packaging>
+
+  <name>Platform API Provider for VOSP</name>
+  <url>http://maven.apache.org</url>
+  <description>PIatform API VOSP Provider allows access to Veracode Platform API using Veracode Platform API Framework POJOs.</description>
+  <parent>
+  	<version>0.0.1-SNAPSHOT</version>
+  	<groupId>com.dennismedeiros.veracode.platform.api</groupId>
+  	<artifactId>veracode-platform-api-framework</artifactId>
+  	<relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+  	<!-- Provider Dependencies -->
+  	<dependency>
+	    <groupId>com.veracode.vosp.api.wrappers</groupId>
+	    <artifactId>vosp-api-wrappers-java</artifactId>
+	    <version>18.9.5.4</version>
+	</dependency>
+   	<dependency>
+   		<groupId>com.dennismedeiros.veracode.platform.api</groupId>
+   		<artifactId>platform-api-core</artifactId>
+   		<version>0.0.1-SNAPSHOT</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>com.dennismedeiros.veracode.platform.api</groupId>
+   		<artifactId>platform-api-parsers</artifactId>
+   		<version>0.0.1-SNAPSHOT</version>
+   	</dependency>
+	<!-- Logging Dependencies -->
+	<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-api</artifactId>
+	    <version>1.7.25</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-simple</artifactId>
+	    <version>1.7.25</version>
+	    <scope>test</scope>
+	</dependency>
+   	
+  </dependencies>
+  
+  
+</project>
