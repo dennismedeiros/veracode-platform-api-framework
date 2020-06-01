@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>platform-api-sdk</artifactId>
+  <packaging>jar</packaging>
+
+  <name>Platform API SDK</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+   	<maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <parent>
+  	<groupId>com.dennismedeiros.veracode.platform.api</groupId>
+  	<artifactId>veracode-platform-api-framework</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  	<relativePath>../pom.xml</relativePath>
+  </parent>
+  <dependencies>
+  	 <!-- SDK should be agnostic to API Content Provider -->
+  	<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-api</artifactId>
+	    <version>1.7.25</version>
+	</dependency>
+	<!-- Dependency Injection should be used? -->
+	<dependency>
+		<groupId>com.dennismedeiros.veracode.platform.api</groupId>
+		<artifactId>platform-api-core</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	<dependency>
+		<groupId>com.dennismedeiros.veracode.platform.api</groupId>
+		<artifactId>platform-api-parsers</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	<dependency>
+		<groupId>com.dennismedeiros.veracode.platform.api</groupId>
+		<artifactId>platform-api-pojos</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+  </dependencies>
+  <description>A Softare Development Kit consisting of Tools and Classes based on the Platform API Framwork to provide generally needed functionality to developers.</description>
+</project>

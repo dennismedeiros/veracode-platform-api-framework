@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<buildinfo xmlns:xsi="http&#x3a;&#x2f;&#x2f;www.w3.org&#x2f;2001&#x2f;XMLSchema-instance" xmlns="https&#x3a;&#x2f;&#x2f;analysiscenter.veracode.com&#x2f;schema&#x2f;4.0&#x2f;buildinfo" xsi:schemaLocation="https&#x3a;&#x2f;&#x2f;analysiscenter.veracode.com&#x2f;schema&#x2f;4.0&#x2f;buildinfo https&#x3a;&#x2f;&#x2f;analysiscenter.veracode.com&#x2f;resource&#x2f;4.0&#x2f;buildinfo.xsd" buildinfo_version="1.4" account_id="32818" app_id="112038" build_id="646291"><build version="13 Nov 2015 Static" build_id="646291" submitter="Veracode" platform="Not Specified" lifecycle_stage="Not Specified" results_ready="false" policy_name="Veracode Transitional Very High" policy_version="1" policy_compliance_status="Did Not Pass" policy_updated_date="2016-05-25T23&#x3a;22&#x3a;04-04&#x3a;00" rules_status="Did Not Pass" grace_period_expired="false" scan_overdue="false" legacy_scan_engine="false">
+      <analysis_unit analysis_type="Static" status="Scan In Process" engine_version="87122"/>
+   </build>
+</buildinfo>

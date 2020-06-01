@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mitigationinfo xmlns="https://analysiscenter.veracode.com/schema/mitigationinfo/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" build_id="2726817" mitigationinfo_version="1.1" xsi:schemaLocation="https://analysiscenter.veracode.com/schema/mitigationinfo/1.0 https://analysiscenter.veracode.com/resource/mitigationinfo.xsd">
+  <issue category="Improper Output Neutralization for Logs" flaw_id="3">
+      <mitigation_action action="appdesign" comment="&#13;Technique : M2 :  Establish and maintain control over all of your outputs&#13;&#10;Specifics : This is a prpposal&#13;&#10;Remaining Risk : asdf&#13;&#10;Verification : asdf" date="2018-08-21 11:49:40" desc="Mitigate by Design" reviewer="Dennis Medeiros"/>
+      <mitigation_action action="comment" comment="&lt;script&gt;alert('325')&lt;/script&gt;" date="2018-08-30 12:32:44" desc="Add Comment" reviewer="Dennis Medeiros"/>
+      <mitigation_action action="comment" comment="&lt;script&gt;alert();&lt;/script&gt;" date="2018-08-30 12:36:44" desc="Add Comment" reviewer="Dennis Medeiros"/>
+      <mitigation_action action="comment" comment="&lt;td align=&quot;left&quot; valign=&quot;middle&quot;&gt;Rejected&lt;/td&gt;/*" date="2018-08-30 12:38:59" desc="Add Comment" reviewer="Dennis Medeiros"/>
+      <mitigation_action action="comment" comment="&lt;td align=&quot;left&quot; valign=&quot;middle&quot;&gt;Rejected&lt;/td&gt;&lt;--" date="2018-08-30 12:46:04" desc="Add Comment" reviewer="Dennis Medeiros"/>
+      <mitigation_action action="deviates" comment="asdfasdfasdf" date="2018-09-20 12:18:19" desc="Deviates from Guidelines" reviewer="Veracode"/>
+      <mitigation_action action="comment" comment="Test" date="2018-09-20 12:19:43" desc="Add Comment" reviewer="Dennis Medeiros"/>
+      <mitigation_action action="conforms" comment="asdfasdfas" date="2018-09-20 12:20:01" desc="Conforms to Guidelines" reviewer="Veracode"/>
+      <mitigation_action action="comment" comment="Test" date="2018-09-20 12:20:53" desc="Add Comment" reviewer="Dennis Medeiros"/>
+   </issue>
+</mitigationinfo>
