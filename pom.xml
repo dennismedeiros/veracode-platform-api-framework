@@ -63,13 +63,16 @@
 	</dependency>
   </dependencies>
   <distributionManagement>
-  <!-- 
+	<repository>
+        <id>central</id>
+        <name>libs-release</name>
+        <url>http://artifactory.local:8081/artifactory/libs-release-local</url>
+    </repository>
     <snapshotRepository>
         <id>snapshots</id>
         <name>libs-snapshot</name>
-        <url>http://artifactory.local:8081/artifactory/libs-snapshot</url>
+        <url>http://artifactory.local:8081/artifactory/libs-snapshot-local</url>
     </snapshotRepository>
-    -->
   </distributionManagement>
   <url>https://github.com/dennismedeiros/veracode-platform-api-framework</url>
   <modules>
