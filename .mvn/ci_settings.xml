@@ -296,7 +296,7 @@ under the License.
     -->
   </profiles>
 	  <activeProfiles>
-		<activeProfile>artifactory</activeProfile>
+		<activeProfile>artifactory.local</activeProfile>
 	  </activeProfiles>
   <!-- activeProfiles
    | List of profiles that are active for all builds.
