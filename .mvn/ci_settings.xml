@@ -122,13 +122,13 @@ under the License.
     </server>
     -->
 	
-	<server>
-      <id>central</id>
+	  <server>
+      <id>artifactory.local.release</id>
       <username>${CI_ARTIFACTORY_USERNAME}</username>
       <password>${CI_ARTIFACTORY_PASSWORD}</password>
     </server>
-	<server>
-      <id>snapshots</id>
+	  <server>
+      <id>artifactory.local.snapshots</id>
       <username>${CI_ARTIFACTORY_USERNAME}</username>
       <password>${CI_ARTIFACTORY_PASSWORD}</password>
     </server>
@@ -223,19 +223,19 @@ under the License.
 	 
 	<!-- This profile sets the internal artifactory configuration --> 
     <profile>
-      <id>artifactory</id>
+      <id>artifactory.local</id>
 	  <repositories>
 		<repository>
 		  <snapshots>
 			<enabled>false</enabled>
 		  </snapshots>
-		  <id>central</id>
+		  <id>artifactory.local.release</id>
 		  <name>libs-release</name>
 		  <url>http://artifactory.local:8081/artifactory/libs-release</url>
 		</repository>
 		<repository>
 		  <snapshots />
-		  <id>snapshots</id>
+		  <id>artifactory.local.snapshots</id>
 		  <name>libs-snapshot</name>
 		  <url>http://artifactory.local:8081/artifactory/libs-snapshot</url>
 		</repository>
@@ -247,13 +247,13 @@ under the License.
 		  <snapshots>
 			<enabled>false</enabled>
 		  </snapshots>
-		  <id>central</id>
+		  <id>artifactory.local.release</id>
 		  <name>libs-release</name>
 		  <url>http://artifactory.local:8081/artifactory/libs-release</url>
 		</pluginRepository>
 		<pluginRepository>
 		  <snapshots />
-		  <id>snapshots</id>
+		  <id>artifactory.local.snapshots</id>
 		  <name>libs-snapshot</name>
 		  <url>http://artifactory.local:8081/artifactory/libs-snapshot</url>
 		</pluginRepository>
