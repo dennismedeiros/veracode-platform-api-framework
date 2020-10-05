@@ -28,15 +28,15 @@ import com.veracode.apiwrapper.wrappers.ResultsAPIWrapper;
 import com.veracode.apiwrapper.wrappers.SandboxAPIWrapper;
 import com.veracode.apiwrapper.wrappers.UploadAPIWrapper;
 
-public class PlatformAPIVospContentModule implements PlatformAPIContentModule {
+public class PlatformAPIXmlContentModule implements PlatformAPIContentModule {
 
-	private static final Logger logger = LoggerFactory.getLogger(PlatformAPIVospContentModule.class);
+	private static final Logger logger = LoggerFactory.getLogger(PlatformAPIXmlContentModule.class);
 	
 	ResultsAPIWrapper m_resultWrapper = null;
 	SandboxAPIWrapper m_sandboxWrapper = null;
 	UploadAPIWrapper m_uploadWrapper = null;
 	
-	public PlatformAPIVospContentModule(Credential credential) throws Throwable {
+	public PlatformAPIXmlContentModule(Credential credential) throws Throwable {
 		this.m_resultWrapper = new ResultsAPIWrapper();
 		this.m_uploadWrapper = new UploadAPIWrapper();
 		this.m_sandboxWrapper = new SandboxAPIWrapper();

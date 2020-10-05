@@ -14,26 +14,25 @@ import com.dennismedeiros.veracode.platform.api.pojo.Scans;
 import com.dennismedeiros.veracode.platform.api.pojo.portfolio.ApplicationPortfolios;
 import com.dennismedeiros.veracode.platform.api.pojo.portfolio.analyses.prescan.PrescanResults;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.DetailedReport;
-import com.dennismedeiros.veracode.platform.api.providers.PlatformPortfolioContentProvider;
 import com.dennismedeiros.veracode.platform.api.providers.modules.PlatformAPIContentModule;
-import com.dennismedeiros.veracode.platform.api.providers.modules.PlatformAPIVospContentModule;
+import com.dennismedeiros.veracode.platform.api.providers.modules.PlatformAPIXmlContentModule;
 
-public class PlatformAPIVospPortfolioContentProvider implements PlatformPortfolioContentProvider{
+public class PlatformAPIXmlPortfolioContentProvider implements PlatformPortfolioContentProvider{
 
 	@SuppressWarnings("unused")
-	private static final Logger logger = LoggerFactory.getLogger(PlatformAPIVospPortfolioContentProvider.class);
+	private static final Logger logger = LoggerFactory.getLogger(PlatformAPIXmlPortfolioContentProvider.class);
 	
-	public static PlatformAPIVospPortfolioContentProvider createInstance(Credential credential) throws Throwable {
-		return new PlatformAPIVospPortfolioContentProvider(new PlatformAPIVospContentModule(credential));
+	public static PlatformAPIXmlPortfolioContentProvider createInstance(Credential credential) throws Throwable {
+		return new PlatformAPIXmlPortfolioContentProvider(new PlatformAPIXmlContentModule(credential));
 	}
 	
-	public static PlatformAPIVospPortfolioContentProvider createInstance(PlatformAPIContentModule module) {
-		return new PlatformAPIVospPortfolioContentProvider(module);
+	public static PlatformAPIXmlPortfolioContentProvider createInstance(PlatformAPIContentModule module) {
+		return new PlatformAPIXmlPortfolioContentProvider(module);
 	}
 	
 	PlatformAPIContentModule module = null;
 	
-	protected PlatformAPIVospPortfolioContentProvider(PlatformAPIContentModule module) {
+	protected PlatformAPIXmlPortfolioContentProvider(PlatformAPIContentModule module) {
 		this.module = module;
 	}
 	

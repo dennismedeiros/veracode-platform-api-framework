@@ -37,6 +37,8 @@
   </licenses>
   <scm>
     <url>https://github.com/dennismedeiros/veracode-platform-api-framework</url>
+    <connection>scm:https://github.local/dmedeiros/veracode-platform-api-framework</connection>
+    <developerConnection>scm:https://github.local/dmedeiros/veracode-platform-api-framework/development-stable</developerConnection>
   </scm>
   <dependencies>
   	<dependency>
@@ -64,12 +66,12 @@
   </dependencies>
   <distributionManagement>
 	<repository>
-        <id>central</id>
+        <id>artifactory.local.release</id>
         <name>libs-release</name>
         <url>http://artifactory.local:8081/artifactory/libs-release-local</url>
     </repository>
     <snapshotRepository>
-        <id>snapshots</id>
+        <id>artifactory.local.snapshots</id>
         <name>libs-snapshot</name>
         <url>http://artifactory.local:8081/artifactory/libs-snapshot-local</url>
     </snapshotRepository>
@@ -82,4 +84,5 @@
  	<module>platform-api-sdk</module>
   	<module>platform-api-provider-vosp</module>
   </modules>
+  <inceptionYear>2015</inceptionYear>
 </project>

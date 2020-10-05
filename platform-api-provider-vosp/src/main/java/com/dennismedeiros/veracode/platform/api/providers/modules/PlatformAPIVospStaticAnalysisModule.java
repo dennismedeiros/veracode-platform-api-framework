@@ -11,7 +11,7 @@ import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.Find;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sast.datapath.DataPaths;
 import com.dennismedeiros.veracode.platform.api.xml.parsers.StaticAnalysisDataPathXmlParser;
 
-public class PlatformAPIVospStaticAnalysisModule extends PlatformAPIVospContentModule {
+public class PlatformAPIVospStaticAnalysisModule extends PlatformAPIXmlContentModule {
 
 	private static final Logger logger = LoggerFactory.getLogger(PlatformAPIVospStaticAnalysisModule.class);
 	
