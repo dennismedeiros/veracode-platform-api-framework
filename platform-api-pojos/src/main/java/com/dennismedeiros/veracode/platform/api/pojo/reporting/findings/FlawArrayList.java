@@ -15,8 +15,8 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.Find;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.Finding;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.Find;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.Finding;
 
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "FlawListType", namespace="default", 

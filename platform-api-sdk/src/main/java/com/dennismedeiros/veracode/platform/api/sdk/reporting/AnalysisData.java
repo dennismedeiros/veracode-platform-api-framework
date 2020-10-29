@@ -3,7 +3,7 @@ package com.dennismedeiros.veracode.platform.api.sdk.reporting;
 import java.time.Instant;
 import java.util.TreeMap;
 
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.Find;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.Find;
 
 public class AnalysisData extends TreeMap<Integer, Find> {
 

@@ -2,11 +2,11 @@ package com.dennismedeiros.veracode.platform.api.pojo.reporting;
 
 import java.util.List;
 
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.AnalysisReportType;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.dast.DynamicAnalysis;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.mast.ManualAnalysis;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sast.StaticAnalysis;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sca.SoftwareCompositionAnalysis;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.AnalysisReportType;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.dast.DynamicAnalysis;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.mast.ManualAnalysis;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.sast.StaticAnalysis;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.sca.SoftwareCompositionAnalysis;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.common.CustomFieldsList;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.common.FlawStatus;
 import com.dennismedeiros.veracode.platform.api.pojo.reporting.common.Severity;

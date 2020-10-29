@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.mast.IAnnotationType;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.mast.IAnnotationType;
 
 @XmlAccessorType(XmlAccessType.NONE)
 @XmlType(name = "AnnotationType")

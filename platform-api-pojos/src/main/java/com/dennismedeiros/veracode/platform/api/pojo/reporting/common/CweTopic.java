@@ -21,12 +21,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sast.StaticAnalysisFlawFinding;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.dast.DynamicAnalysisFlawFind;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.dast.DynamicAnalysisFlawFinding;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.mast.ManualAnalysisFlawFind;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.mast.ManualAnalysisFlawFinding;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sast.StaticAnalysisFlaw;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.dast.DynamicAnalysisFlawFind;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.dast.DynamicAnalysisFlawFinding;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.mast.ManualAnalysisFlawFind;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.mast.ManualAnalysisFlawFinding;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.sast.StaticAnalysisFlaw;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.sast.StaticAnalysisFlawFinding;
 
 /**
  * Class representing an instance of a CWE Category 

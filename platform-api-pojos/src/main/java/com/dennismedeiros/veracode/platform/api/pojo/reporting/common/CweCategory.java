@@ -3,9 +3,9 @@ package com.dennismedeiros.veracode.platform.api.pojo.reporting.common;
 import java.math.BigInteger;
 import java.util.List;
 
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.dast.DynamicAnalysisFlawFind;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.mast.ManualAnalysisFlawFind;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sast.StaticAnalysisFlaw;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.dast.DynamicAnalysisFlawFind;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.mast.ManualAnalysisFlawFind;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.sast.StaticAnalysisFlaw;
 
 /**
  * 

@@ -7,8 +7,8 @@ import org.slf4j.LoggerFactory;
 
 import com.dennismedeiros.veracode.platform.api.credentials.Credential;
 import com.dennismedeiros.veracode.platform.api.pojo.Scan;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.Find;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.analysis.sast.datapath.DataPaths;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.Find;
+import com.dennismedeiros.veracode.platform.api.pojo.analyses.sast.datapath.DataPaths;
 import com.dennismedeiros.veracode.platform.api.xml.parsers.StaticAnalysisDataPathXmlParser;
 
 public class PlatformAPIVospStaticAnalysisModule extends PlatformAPIXmlContentModule {
