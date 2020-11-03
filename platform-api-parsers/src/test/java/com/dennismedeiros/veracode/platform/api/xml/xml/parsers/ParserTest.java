@@ -7,8 +7,8 @@ import java.io.FileReader;
 import java.util.Iterator;
 import java.util.List;
 
-import com.dennismedeiros.veracode.platform.api.pojo.ApplicationPortfolio;
-import com.dennismedeiros.veracode.platform.api.pojo.portfolio.ApplicationPortfolios;
+import com.dennismedeiros.veracode.platform.api.pojos.ApplicationPortfolio;
+import com.dennismedeiros.veracode.platform.api.pojos.portfolio.ApplicationPortfolios;
 import com.dennismedeiros.veracode.platform.api.xml.parsers.ApplicationListXmlParser;
 
 /**

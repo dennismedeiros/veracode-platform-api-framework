@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.DetailedReport;
+import com.dennismedeiros.veracode.platform.api.pojos.reporting.DetailedReport;
 import com.dennismedeiros.veracode.platform.api.xml.parsers.DetailedReportXmlParser;
 
 

@@ -41,7 +41,12 @@
 	</dependency>
 	<dependency>
 		<groupId>com.dennismedeiros.veracode.platform.api</groupId>
-		<artifactId>platform-api-pojos</artifactId>
+		<artifactId>platform-api-pojos-platform</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	<dependency>
+		<groupId>com.dennismedeiros.veracode.platform.api</groupId>
+		<artifactId>platform-api-pojos-analysis</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</dependency>
   </dependencies>

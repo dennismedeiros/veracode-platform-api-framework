@@ -11,7 +11,7 @@ import java.util.TreeSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.dennismedeiros.veracode.platform.api.pojo.analyses.Find;
+import com.dennismedeiros.veracode.platform.api.pojos.analyses.Find;
 import com.dennismedeiros.veracode.platform.api.sdk.reporting.AnalysisData;
 import com.dennismedeiros.veracode.platform.api.sdk.reporting.TrendRecordSet;
 import com.dennismedeiros.veracode.platform.api.sdk.reporting.TrendRecordState;

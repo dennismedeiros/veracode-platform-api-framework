@@ -12,8 +12,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.dennismedeiros.veracode.platform.api.pojo.Scan;
-import com.dennismedeiros.veracode.platform.api.pojo.portfolio.analyses.scanlist.ScanList;
+import com.dennismedeiros.veracode.platform.api.pojos.Scan;
+import com.dennismedeiros.veracode.platform.api.pojos.portfolio.analyses.scanlist.ScanList;
 import com.dennismedeiros.veracode.platform.api.xml.parsers.ScanListXmlParser;
 
 public class ScanListXmlParserTest {

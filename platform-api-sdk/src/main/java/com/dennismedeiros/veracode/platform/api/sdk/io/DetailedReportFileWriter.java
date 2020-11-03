@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.DetailedReport;
+import com.dennismedeiros.veracode.platform.api.pojos.reporting.DetailedReport;
 import com.dennismedeiros.veracode.platform.api.xml.parsers.DetailedReportXmlParser;
 
 

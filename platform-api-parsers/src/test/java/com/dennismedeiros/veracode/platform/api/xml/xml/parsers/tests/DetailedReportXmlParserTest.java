@@ -13,9 +13,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.dennismedeiros.veracode.platform.api.pojo.analyses.sast.Module;
-import com.dennismedeiros.veracode.platform.api.pojo.analyses.sast.StaticAnalysis;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.DetailedReport;
+import com.dennismedeiros.veracode.platform.api.pojos.analyses.sast.Module;
+import com.dennismedeiros.veracode.platform.api.pojos.analyses.sast.StaticAnalysis;
+import com.dennismedeiros.veracode.platform.api.pojos.reporting.DetailedReport;
 import com.dennismedeiros.veracode.platform.api.xml.parsers.DetailedReportXmlParser;
 
 /**

@@ -5,18 +5,18 @@ import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.dennismedeiros.veracode.platform.api.credentials.Credential;
-import com.dennismedeiros.veracode.platform.api.pojo.Scan;
-import com.dennismedeiros.veracode.platform.api.pojo.analyses.Find;
-import com.dennismedeiros.veracode.platform.api.pojo.analyses.sast.datapath.DataPaths;
+import com.dennismedeiros.veracode.platform.api.credentials.Credentials;
+import com.dennismedeiros.veracode.platform.api.pojos.Scan;
+import com.dennismedeiros.veracode.platform.api.pojos.analyses.Find;
+import com.dennismedeiros.veracode.platform.api.pojos.analyses.sast.datapath.DataPaths;
 import com.dennismedeiros.veracode.platform.api.xml.parsers.StaticAnalysisDataPathXmlParser;
 
-public class PlatformAPIVospStaticAnalysisModule extends PlatformAPIXmlContentModule {
+public class PlatformAPIVospStaticAnalysisModule extends PlatformAPIXmlPortfolioContentModule {
 
 	private static final Logger logger = LoggerFactory.getLogger(PlatformAPIVospStaticAnalysisModule.class);
 	
-	public PlatformAPIVospStaticAnalysisModule(Credential credential) throws Throwable {
-		super(credential);
+	public PlatformAPIVospStaticAnalysisModule(Credentials credentials) throws Throwable {
+		super(credentials);
 	}
 	
 	//TODO: limit finding to static finding

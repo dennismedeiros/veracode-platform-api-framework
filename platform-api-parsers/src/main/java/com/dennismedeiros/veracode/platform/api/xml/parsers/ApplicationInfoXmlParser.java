@@ -1,7 +1,7 @@
 package com.dennismedeiros.veracode.platform.api.xml.parsers;
 
 
-import com.dennismedeiros.veracode.platform.api.pojo.portfolio.ApplicationPortfolioInformationEntity;
+import com.dennismedeiros.veracode.platform.api.pojos.portfolio.ApplicationPortfolioInformationEntity;
 import com.dennismedeiros.veracode.platform.api.xml.parsers.jaxb.JaxbBaseXmlParser;
 
 public class ApplicationInfoXmlParser extends JaxbBaseXmlParser<ApplicationPortfolioInformationEntity> {

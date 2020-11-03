@@ -78,11 +78,13 @@
   </distributionManagement>
   <url>https://github.com/dennismedeiros/veracode-platform-api-framework</url>
   <modules>
-  	<module>platform-api-pojos</module> 
+  	 
   	<module>platform-api-core</module> 
  	<module>platform-api-parsers</module> 
  	<module>platform-api-sdk</module>
   	<module>platform-api-provider-vosp</module>
+  	<module>platform-api-pojos-analysis</module>
+  	<module>platform-api-pojos-platform</module>
   </modules>
   <inceptionYear>2015</inceptionYear>
 </project>

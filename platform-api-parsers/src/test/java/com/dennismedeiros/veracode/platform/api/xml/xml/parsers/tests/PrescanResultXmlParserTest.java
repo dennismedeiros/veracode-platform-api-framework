@@ -10,9 +10,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.dennismedeiros.veracode.platform.api.pojo.portfolio.analyses.prescan.ModuleFile;
-import com.dennismedeiros.veracode.platform.api.pojo.portfolio.analyses.prescan.PrescanResults;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.DetailedReport;
+import com.dennismedeiros.veracode.platform.api.pojos.portfolio.analyses.prescan.ModuleFile;
+import com.dennismedeiros.veracode.platform.api.pojos.portfolio.analyses.prescan.PrescanResults;
+import com.dennismedeiros.veracode.platform.api.pojos.reporting.DetailedReport;
 import com.dennismedeiros.veracode.platform.api.xml.parsers.PrescanResultXmlParser;
 
 public class PrescanResultXmlParserTest {

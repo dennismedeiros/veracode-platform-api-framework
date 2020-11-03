@@ -3,7 +3,7 @@ package com.dennismedeiros.veracode.platform.api.credentials;
 import com.dennismedeiros.veracode.platform.api.lang.SecureString;
 
 @Deprecated
-public class UserPasswordCredential implements Credential {
+public class UserPasswordCredential implements Credentials {
 
 	private SecureString username = null;
 	private SecureString password = null;
@@ -23,7 +23,7 @@ public class UserPasswordCredential implements Credential {
 	}
 
 	@Override
-	public char[] getCredential() {
+	public char[] getCredentials() {
 		// TODO Auto-generated method stub
 		return null;
 	}

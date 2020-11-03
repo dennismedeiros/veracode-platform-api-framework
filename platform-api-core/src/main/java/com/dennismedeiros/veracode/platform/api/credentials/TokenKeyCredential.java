@@ -1,25 +1,30 @@
 package com.dennismedeiros.veracode.platform.api.credentials;
 
-public class TokenKeyCredential implements Credential{
+public class TokenKeyCredential implements Credentials{
 
+	//TODO: replace with SecureString
 	private char[] id;
 	private char[] key;
 	
-	public TokenKeyCredential(char[] id, char[] key) {
+	public static Credentials create(char[] id, char[] key) {
+		return new TokenKeyCredential(id, key);
+	}
+	
+	private TokenKeyCredential(char[] id, char[] key) {
 		this.id = id;
 		this.key = key;
 	}
 		
-	public String getKey() {
-		return String.valueOf(this.key);
+	public char[] getKey() {
+		return this.key;
 	}
 	
-	public String getID() {
-		return String.valueOf(this.id);
+	public char[] getID() {
+		return this.id;
 	}
 
 	@Override
-	public char[] getCredential() {
+	public char[] getCredentials() {
 		return String.format("\"id\" : \"%s\" , \"key\" : \"%s\"", this.id, this.key).toCharArray();
 	}
 

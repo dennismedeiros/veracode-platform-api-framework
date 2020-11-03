@@ -1,15 +1,15 @@
 package com.dennismedeiros.veracode.platform.api.providers;
 
-import com.dennismedeiros.veracode.platform.api.pojo.ApplicationInformation;
-import com.dennismedeiros.veracode.platform.api.pojo.ApplicationPortfolio;
-import com.dennismedeiros.veracode.platform.api.pojo.Sandbox;
-import com.dennismedeiros.veracode.platform.api.pojo.Sandboxes;
-import com.dennismedeiros.veracode.platform.api.pojo.Scan;
-import com.dennismedeiros.veracode.platform.api.pojo.ScanInformation;
-import com.dennismedeiros.veracode.platform.api.pojo.Scans;
-import com.dennismedeiros.veracode.platform.api.pojo.portfolio.ApplicationPortfolios;
-import com.dennismedeiros.veracode.platform.api.pojo.portfolio.analyses.prescan.PrescanResults;
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.DetailedReport;
+import com.dennismedeiros.veracode.platform.api.pojos.ApplicationInformation;
+import com.dennismedeiros.veracode.platform.api.pojos.ApplicationPortfolio;
+import com.dennismedeiros.veracode.platform.api.pojos.Sandbox;
+import com.dennismedeiros.veracode.platform.api.pojos.Sandboxes;
+import com.dennismedeiros.veracode.platform.api.pojos.Scan;
+import com.dennismedeiros.veracode.platform.api.pojos.ScanInformation;
+import com.dennismedeiros.veracode.platform.api.pojos.Scans;
+import com.dennismedeiros.veracode.platform.api.pojos.portfolio.ApplicationPortfolios;
+import com.dennismedeiros.veracode.platform.api.pojos.portfolio.analyses.prescan.PrescanResults;
+import com.dennismedeiros.veracode.platform.api.pojos.reporting.DetailedReport;
 
 public interface PlatformPortfolioContentProvider {
 	

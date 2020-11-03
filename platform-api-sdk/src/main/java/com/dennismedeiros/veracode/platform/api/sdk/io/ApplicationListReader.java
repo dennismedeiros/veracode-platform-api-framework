@@ -3,7 +3,7 @@ package com.dennismedeiros.veracode.platform.api.sdk.io;
 import java.io.File;
 import java.io.FileReader;
 
-import com.dennismedeiros.veracode.platform.api.pojo.portfolio.ApplicationPortfolios;
+import com.dennismedeiros.veracode.platform.api.pojos.portfolio.ApplicationPortfolios;
 import com.dennismedeiros.veracode.platform.api.xml.parsers.ApplicationListXmlParser;
 
 public class ApplicationListReader {

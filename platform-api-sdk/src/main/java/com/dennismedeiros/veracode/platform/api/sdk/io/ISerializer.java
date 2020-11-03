@@ -1,6 +1,6 @@
 package com.dennismedeiros.veracode.platform.api.sdk.io;
 
-import com.dennismedeiros.veracode.platform.api.pojo.reporting.DetailedReport;
+import com.dennismedeiros.veracode.platform.api.pojos.reporting.DetailedReport;
 
 public interface ISerializer {
 

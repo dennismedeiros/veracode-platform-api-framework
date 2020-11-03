@@ -12,8 +12,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.dennismedeiros.veracode.platform.api.pojo.Sandbox;
-import com.dennismedeiros.veracode.platform.api.pojo.portfolio.sandboxes.SandboxList;
+import com.dennismedeiros.veracode.platform.api.pojos.Sandbox;
+import com.dennismedeiros.veracode.platform.api.pojos.portfolio.sandboxes.SandboxList;
 import com.dennismedeiros.veracode.platform.api.xml.parsers.SandboxListXmlParser;
 
 public class SandboxListXmlParserTest {

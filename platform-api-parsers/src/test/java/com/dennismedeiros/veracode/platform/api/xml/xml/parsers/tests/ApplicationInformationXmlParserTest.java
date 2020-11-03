@@ -11,8 +11,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.dennismedeiros.veracode.platform.api.pojo.ApplicationPortfolio;
-import com.dennismedeiros.veracode.platform.api.pojo.portfolio.ApplicationPortfolioInformationEntity;
+import com.dennismedeiros.veracode.platform.api.pojos.ApplicationPortfolio;
+import com.dennismedeiros.veracode.platform.api.pojos.portfolio.ApplicationPortfolioInformationEntity;
 import com.dennismedeiros.veracode.platform.api.xml.parsers.ApplicationInfoXmlParser;
 
 /**

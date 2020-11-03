@@ -24,7 +24,7 @@
   	<dependency>
 	    <groupId>com.veracode.vosp.api.wrappers</groupId>
 	    <artifactId>vosp-api-wrappers-java</artifactId>
-	    <version>18.9.5.4</version>
+	    <version>20.8.7.1</version>
 	</dependency>
    	<dependency>
    		<groupId>com.dennismedeiros.veracode.platform.api</groupId>
@@ -49,7 +49,17 @@
 	    <version>1.7.25</version>
 	    <scope>test</scope>
 	</dependency>
-   	
+
+	<dependency>
+		<groupId>com.dennismedeiros.veracode.platform.api</groupId>
+		<artifactId>platform-api-pojos-platform</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	<dependency>
+		<groupId>com.dennismedeiros.veracode.platform.api</groupId>
+		<artifactId>platform-api-pojos-analysis</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
   </dependencies>
   
   
